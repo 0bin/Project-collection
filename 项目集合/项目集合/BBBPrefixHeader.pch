@@ -1,0 +1,32 @@
+//
+//  BBBPrefixHeader.pch
+//  项目集合
+//
+//  Created by LinBin on 16/6/23.
+//  Copyright © 2016年 LinBin. All rights reserved.
+//
+
+#ifndef BBBPrefixHeader_pch
+#define BBBPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "BBBConst"
+#import "UIView+BBBViewCategory.h"
+
+#define BBBScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#define BBBScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define BBBRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#ifdef DEBUG
+#define BBBLog(...) NSLog(__VA_ARGS__)
+#else
+#define BBBLog(...)
+#endif
+
+#define BBBLogFunc XMGLog(@"%s", __func__)
+
+#endif /* BBBPrefixHeader_pch */
