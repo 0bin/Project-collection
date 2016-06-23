@@ -1,16 +1,13 @@
 //
 //  UIView+BBBViewCategory.h
-//  项目集合
-//
-//  Created by LinBin on 16/6/23.
-//  Copyright © 2016年 LinBin. All rights reserved.
-//
-
+//  直接获取x、y、宽、高、
+//  是否显示在屏幕
+//  xib加载
 #import <UIKit/UIKit.h>
 
 
 
-@interface UIView (BBBViewCategory)
+@interface UIView (BBBCategory)
 
 
 

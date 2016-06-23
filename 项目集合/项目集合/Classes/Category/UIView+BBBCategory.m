@@ -6,9 +6,9 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
-#import "UIView+BBBViewCategory.h"
+#import "UIView+BBBCategory.h"
 
-@implementation UIView (BBBViewCategory)
+@implementation UIView (BBBCategory)
 
 + (instancetype)initWithFromXib
 {

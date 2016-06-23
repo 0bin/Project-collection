@@ -6,8 +6,6 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
-#import "BBBConst.h"
+#import <UIKit/UIKit.h>
 
-@implementation BBBConst
 
-@end
