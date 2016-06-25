@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243996361D1CF9E7004D44D7 /* BBBOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243996351D1CF9E7004D44D7 /* BBBOneModel.m */; };
+		2439963A1D1CFCCA004D44D7 /* BSTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 243996381D1CFCCA004D44D7 /* BSTextTableViewCell.m */; };
+		2439963B1D1CFCCA004D44D7 /* BSTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243996391D1CFCCA004D44D7 /* BSTextTableViewCell.xib */; };
 		24BF68391D1BB03A00533B19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BF68381D1BB03A00533B19 /* main.m */; };
 		24BF68441D1BB03A00533B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24BF68431D1BB03A00533B19 /* Assets.xcassets */; };
 		24BF68521D1BB03A00533B19 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BF68511D1BB03A00533B19 /* ____Tests.m */; };
@@ -23,6 +26,15 @@
 		24BF68C31D1BEFFA00533B19 /* BBBTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BF68B71D1BEFFA00533B19 /* BBBTwoViewController.m */; };
 		24BF68C61D1C02F300533B19 /* UIBarButtonItem+BBBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BF68C51D1C02F300533B19 /* UIBarButtonItem+BBBCategory.m */; };
 		24BF68C91D1C09B700533B19 /* BBBContentTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BF68C81D1C09B700533B19 /* BBBContentTableController.m */; };
+		24D0094E1D1CCF6600F29D65 /* BBBHTTPSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D0094D1D1CCF6600F29D65 /* BBBHTTPSTool.m */; };
+		24F2E65C1D1EAC32001642E1 /* BBBTwoTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F2E65A1D1EAC32001642E1 /* BBBTwoTableController.m */; };
+		24F2E65D1D1EAC32001642E1 /* BBBTwoTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F2E65B1D1EAC32001642E1 /* BBBTwoTableController.xib */; };
+		24F2E6601D1EAE2D001642E1 /* BBBCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F2E65F1D1EAE2D001642E1 /* BBBCategoryModel.m */; };
+		24F2E6641D1EB0EC001642E1 /* BBBCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F2E6621D1EB0EC001642E1 /* BBBCategoryCell.m */; };
+		24F2E6651D1EB0EC001642E1 /* BBBCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F2E6631D1EB0EC001642E1 /* BBBCategoryCell.xib */; };
+		24F2E6681D1EC81C001642E1 /* BBBUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F2E6671D1EC81C001642E1 /* BBBUserModel.m */; };
+		24F2E66C1D1ECA4D001642E1 /* BBBUsersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F2E66A1D1ECA4D001642E1 /* BBBUsersCell.m */; };
+		24F2E66D1D1ECA4D001642E1 /* BBBUsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F2E66B1D1ECA4D001642E1 /* BBBUsersCell.xib */; };
 		ECC3DEB958295D9CB345653E /* libPods-项目集合.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD9719F849F06C07C3ACED /* libPods-项目集合.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +57,11 @@
 
 /* Begin PBXFileReference section */
 		1FCD9719F849F06C07C3ACED /* libPods-项目集合.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-项目集合.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		243996341D1CF9E7004D44D7 /* BBBOneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBOneModel.h; sourceTree = "<group>"; };
+		243996351D1CF9E7004D44D7 /* BBBOneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBOneModel.m; sourceTree = "<group>"; };
+		243996371D1CFCCA004D44D7 /* BSTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTextTableViewCell.h; sourceTree = "<group>"; };
+		243996381D1CFCCA004D44D7 /* BSTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTextTableViewCell.m; sourceTree = "<group>"; };
+		243996391D1CFCCA004D44D7 /* BSTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTextTableViewCell.xib; sourceTree = "<group>"; };
 		24BF68341D1BB03A00533B19 /* 项目集合.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "项目集合.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24BF68381D1BB03A00533B19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24BF68431D1BB03A00533B19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +97,21 @@
 		24BF68C51D1C02F300533B19 /* UIBarButtonItem+BBBCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BBBCategory.m"; sourceTree = "<group>"; };
 		24BF68C71D1C09B700533B19 /* BBBContentTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBContentTableController.h; sourceTree = "<group>"; };
 		24BF68C81D1C09B700533B19 /* BBBContentTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBContentTableController.m; sourceTree = "<group>"; };
+		24D0094C1D1CCF6600F29D65 /* BBBHTTPSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBHTTPSTool.h; sourceTree = "<group>"; };
+		24D0094D1D1CCF6600F29D65 /* BBBHTTPSTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBHTTPSTool.m; sourceTree = "<group>"; };
+		24F2E6591D1EAC32001642E1 /* BBBTwoTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBTwoTableController.h; sourceTree = "<group>"; };
+		24F2E65A1D1EAC32001642E1 /* BBBTwoTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBTwoTableController.m; sourceTree = "<group>"; };
+		24F2E65B1D1EAC32001642E1 /* BBBTwoTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBBTwoTableController.xib; sourceTree = "<group>"; };
+		24F2E65E1D1EAE2D001642E1 /* BBBCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBCategoryModel.h; sourceTree = "<group>"; };
+		24F2E65F1D1EAE2D001642E1 /* BBBCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBCategoryModel.m; sourceTree = "<group>"; };
+		24F2E6611D1EB0EC001642E1 /* BBBCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBCategoryCell.h; sourceTree = "<group>"; };
+		24F2E6621D1EB0EC001642E1 /* BBBCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBCategoryCell.m; sourceTree = "<group>"; };
+		24F2E6631D1EB0EC001642E1 /* BBBCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBBCategoryCell.xib; sourceTree = "<group>"; };
+		24F2E6661D1EC81C001642E1 /* BBBUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBUserModel.h; sourceTree = "<group>"; };
+		24F2E6671D1EC81C001642E1 /* BBBUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBUserModel.m; sourceTree = "<group>"; };
+		24F2E6691D1ECA4D001642E1 /* BBBUsersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBUsersCell.h; sourceTree = "<group>"; };
+		24F2E66A1D1ECA4D001642E1 /* BBBUsersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBUsersCell.m; sourceTree = "<group>"; };
+		24F2E66B1D1ECA4D001642E1 /* BBBUsersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBBUsersCell.xib; sourceTree = "<group>"; };
 		8D8142332E745AF86AF88051 /* Pods-项目集合.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-项目集合.release.xcconfig"; path = "Pods/Target Support Files/Pods-项目集合/Pods-项目集合.release.xcconfig"; sourceTree = "<group>"; };
 		D89FFD77F10614D677947E4E /* Pods-项目集合.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-项目集合.debug.xcconfig"; path = "Pods/Target Support Files/Pods-项目集合/Pods-项目集合.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +224,8 @@
 		24BF688E1D1BEFFA00533B19 /* BBBLib */ = {
 			isa = PBXGroup;
 			children = (
+				24D0094C1D1CCF6600F29D65 /* BBBHTTPSTool.h */,
+				24D0094D1D1CCF6600F29D65 /* BBBHTTPSTool.m */,
 			);
 			path = BBBLib;
 			sourceTree = "<group>";
@@ -257,6 +291,9 @@
 				24BF689C1D1BEFFA00533B19 /* BBBOneViewController.m */,
 				24BF68C71D1C09B700533B19 /* BBBContentTableController.h */,
 				24BF68C81D1C09B700533B19 /* BBBContentTableController.m */,
+				24F2E6591D1EAC32001642E1 /* BBBTwoTableController.h */,
+				24F2E65A1D1EAC32001642E1 /* BBBTwoTableController.m */,
+				24F2E65B1D1EAC32001642E1 /* BBBTwoTableController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,6 +301,12 @@
 		24BF689D1D1BEFFA00533B19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				243996341D1CF9E7004D44D7 /* BBBOneModel.h */,
+				243996351D1CF9E7004D44D7 /* BBBOneModel.m */,
+				24F2E65E1D1EAE2D001642E1 /* BBBCategoryModel.h */,
+				24F2E65F1D1EAE2D001642E1 /* BBBCategoryModel.m */,
+				24F2E6661D1EC81C001642E1 /* BBBUserModel.h */,
+				24F2E6671D1EC81C001642E1 /* BBBUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +314,15 @@
 		24BF689E1D1BEFFA00533B19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				243996371D1CFCCA004D44D7 /* BSTextTableViewCell.h */,
+				243996381D1CFCCA004D44D7 /* BSTextTableViewCell.m */,
+				243996391D1CFCCA004D44D7 /* BSTextTableViewCell.xib */,
+				24F2E6611D1EB0EC001642E1 /* BBBCategoryCell.h */,
+				24F2E6621D1EB0EC001642E1 /* BBBCategoryCell.m */,
+				24F2E6631D1EB0EC001642E1 /* BBBCategoryCell.xib */,
+				24F2E6691D1ECA4D001642E1 /* BBBUsersCell.h */,
+				24F2E66A1D1ECA4D001642E1 /* BBBUsersCell.m */,
+				24F2E66B1D1ECA4D001642E1 /* BBBUsersCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,7 +596,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F2E6651D1EB0EC001642E1 /* BBBCategoryCell.xib in Resources */,
+				24F2E65D1D1EAC32001642E1 /* BBBTwoTableController.xib in Resources */,
 				24BF68441D1BB03A00533B19 /* Assets.xcassets in Resources */,
+				2439963B1D1CFCCA004D44D7 /* BSTextTableViewCell.xib in Resources */,
+				24F2E66D1D1ECA4D001642E1 /* BBBUsersCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,13 +677,21 @@
 				24BF68BB1D1BEFFA00533B19 /* BBBConst.m in Sources */,
 				24BF68BA1D1BEFFA00533B19 /* AppDelegate.m in Sources */,
 				24BF68BC1D1BEFFA00533B19 /* UIView+BBBCategory.m in Sources */,
+				24F2E6601D1EAE2D001642E1 /* BBBCategoryModel.m in Sources */,
+				24D0094E1D1CCF6600F29D65 /* BBBHTTPSTool.m in Sources */,
+				24F2E6641D1EB0EC001642E1 /* BBBCategoryCell.m in Sources */,
 				24BF68C11D1BEFFA00533B19 /* BBBTabBar.m in Sources */,
 				24BF68391D1BB03A00533B19 /* main.m in Sources */,
 				24BF68BF1D1BEFFA00533B19 /* BBBNavigationController.m in Sources */,
 				24BF68C31D1BEFFA00533B19 /* BBBTwoViewController.m in Sources */,
+				24F2E65C1D1EAC32001642E1 /* BBBTwoTableController.m in Sources */,
+				24F2E66C1D1ECA4D001642E1 /* BBBUsersCell.m in Sources */,
 				24BF68C01D1BEFFA00533B19 /* BBBTabBarController.m in Sources */,
+				243996361D1CF9E7004D44D7 /* BBBOneModel.m in Sources */,
 				24BF68C61D1C02F300533B19 /* UIBarButtonItem+BBBCategory.m in Sources */,
+				24F2E6681D1EC81C001642E1 /* BBBUserModel.m in Sources */,
 				24BF68C91D1C09B700533B19 /* BBBContentTableController.m in Sources */,
+				2439963A1D1CFCCA004D44D7 /* BSTextTableViewCell.m in Sources */,
 				24BF68C21D1BEFFA00533B19 /* BBBThreeViewController.m in Sources */,
 				24BF68BD1D1BEFFA00533B19 /* BBBFourViewController.m in Sources */,
 			);

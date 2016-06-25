@@ -9,6 +9,7 @@
 #import "BBBOneViewController.h"
 #import "UIBarButtonItem+BBBCategory.h"
 #import "BBBContentTableController.h"
+#import "BBBTwoTableController.h"
 
 @interface BBBOneViewController () <UIScrollViewDelegate>
 
@@ -180,8 +181,8 @@ static const NSUInteger childViewCount = 7;
  */
 - (void)leftButtonClick {
     
-//    BSRSSTableViewController *rss = [[BSRSSTableViewController alloc] init];
-//    [self.navigationController pushViewController:rss animated:YES];
+    BBBTwoTableController *twoTable = [[BBBTwoTableController alloc] init];
+    [self.navigationController pushViewController:twoTable animated:YES];
 }
 
 /**

@@ -6,40 +6,177 @@
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
+#import <YYModel.h>
+#import <SVProgressHUD.h>
+#import <MJRefresh.h>
+
 #import "BBBContentTableController.h"
+#import "BBBHTTPSTool.h"
+#import "BBBOneModel.h"
+
 
 @interface BBBContentTableController ()
+
+/** 所有数据 */
+@property (strong, nonatomic) NSMutableArray *allData;
+/** 加载更多参数 */
+@property (copy,nonatomic) NSString *maxtime;
+/** 加载页数 */
+@property (assign, nonatomic) NSInteger page;
+/** 加载页数 */
+@property (assign, nonatomic) NSDictionary *parameters;
+/** 选中 */
+@property (assign, nonatomic) NSInteger  selectedIndex;
 
 @end
 
 @implementation BBBContentTableController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+/**
+ *  懒加载
+ */
+- (NSMutableArray *)allData
+{
+    if (_allData == nil) {
+        _allData = [NSMutableArray array];
+    }
+    return _allData;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    //添加刷新控件
+    [self addRefreshController];
 }
+
+/**
+ *  添加刷新控件
+ */
+- (void)addRefreshController
+{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadTextData:)];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTextData:)];
+    
+}
+
+/**
+ *  请求数据
+ */
+- (void)loadTextData:(UIRefreshControl *)refresh
+{
+
+    [self.tableView.mj_footer endRefreshing];
+    //请求数据
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @(self.type);
+    parameters[@"page"] = @(self.page);
+    self.parameters = parameters;
+    
+    [[BBBHTTPSTool shareTool]GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters succeed:^(id data) {
+        
+        if (self.parameters != parameters) return;
+        self.maxtime = data[@"info"][@"maxtime"];
+        
+        NSMutableArray *arrayM = [NSMutableArray array];
+        for (NSDictionary *dict in data[@"list"]) {
+            BBBOneModel *model = [BBBOneModel yy_modelWithDictionary:dict];
+            [arrayM addObject:model];
+        }
+        self.allData = arrayM;
+        //更新table数据
+        [self.tableView reloadData];
+        //结束刷新
+        [self.tableView.mj_header endRefreshing];
+        self.page = 0;
+  
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+    }];
+}
+
+/**
+ *  请求更多数据
+ */
+- (void)loadMoreTextData:(UIRefreshControl *)refresh {
+    
+    [self.tableView.mj_header endRefreshing];
+    self.page++;
+    //请求更多数据
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @(self.type);
+    parameters[@"page"] = @(self.page);
+    parameters[@"maxtime"] = self.maxtime;
+    self.parameters = parameters;
+    
+    [[BBBHTTPSTool shareTool]GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters succeed:^(id data) {
+        
+        if (self.parameters != parameters) return;
+        self.maxtime = data[@"info"][@"maxtime"];
+        NSMutableArray *arrayM = [NSMutableArray array];
+        for (NSDictionary *dict in data[@"list"]) {
+            BBBOneModel *model = [BBBOneModel yy_modelWithDictionary:dict];
+            [arrayM addObject:model];
+        }
+        //添加更多数据
+        [self.allData addObjectsFromArray:arrayM];
+        //更新table 数据
+        [self.tableView reloadData];
+        //结束刷新
+        [self.tableView.mj_footer endRefreshing];
+
+        
+    } failure:^(NSError *error) {
+        self.page--;
+        [self.tableView.mj_footer endRefreshing];
+        
+    }];
+    
+    
+}
+
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    return 1;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    self.tableView.mj_footer.hidden = (self.allData.count == 0);
+//    return self.allData.count;
+//}
+//
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//
+//    
+//}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
+//#pragma mark - Tableview datagate
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//
+//    
+//}
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    
+//    
+//    
+//}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
