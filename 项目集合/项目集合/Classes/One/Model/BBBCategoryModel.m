@@ -10,4 +10,12 @@
 
 @implementation BBBCategoryModel
 
+- (NSMutableArray *)allUserArray
+{
+    if (_allUserArray == nil) {
+        _allUserArray = [NSMutableArray array];
+    }
+    return _allUserArray;
+}
+
 @end

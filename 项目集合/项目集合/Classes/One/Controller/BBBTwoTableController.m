@@ -19,16 +19,17 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 @property (weak, nonatomic) IBOutlet UITableView *userTableView;
+
 @property (strong, nonatomic) NSArray *categoryArray;
-@property (strong, nonatomic) BBBHTTPSTool *tool;
 /**
  *  <#Description#>
  */
 @property (strong, nonatomic) NSArray *userArray;
-/**
- *  <#Description#>
- */
+
+@property (strong, nonatomic) BBBHTTPSTool *tool;
+
 @property (strong, nonatomic) NSMutableDictionary *patameters;
+
 @end
 
 @implementation BBBTwoTableController
@@ -62,7 +63,10 @@ static NSString *const usersCell = @"usersCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
     [self loadCategoryData];
+    
+    
     [self.categoryTableView registerNib:[UINib nibWithNibName:@"BBBCategoryCell" bundle:nil] forCellReuseIdentifier:categoryCell];
     [self.userTableView registerNib:[UINib nibWithNibName:@"BBBUsersCell" bundle:nil] forCellReuseIdentifier:usersCell];
     
@@ -70,7 +74,8 @@ static NSString *const usersCell = @"usersCell";
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [self.categoryTableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
     [self.userTableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
-
+    self.userTableView.rowHeight = 88;
+   
     
 }
 
@@ -78,6 +83,7 @@ static NSString *const usersCell = @"usersCell";
 
 - (void)loadCategoryData
 {
+    
     NSMutableDictionary *patameters = [NSMutableDictionary dictionary];
     patameters[@"a"] = @"category";
     patameters[@"c"] = @"subscribe";
@@ -98,6 +104,12 @@ static NSString *const usersCell = @"usersCell";
     }];
 }
 
+- (void)loadUsersData
+{
+
+
+
+}
 
 #pragma mark <TableView DataSource>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -108,8 +120,9 @@ static NSString *const usersCell = @"usersCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.categoryTableView) {
-          return self.categoryArray.count;
+        return self.categoryArray.count;
     } else {
+        
         return self.userArray.count;
     }
   
@@ -124,6 +137,7 @@ static NSString *const usersCell = @"usersCell";
     } else {
         BBBUsersCell *cell = [tableView dequeueReusableCellWithIdentifier:usersCell forIndexPath:indexPath];
         cell.model = self.userArray[indexPath.row];
+        
         return  cell;
     }
 
@@ -134,47 +148,47 @@ static NSString *const usersCell = @"usersCell";
 #pragma mark <TableView UITableViewDelegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BBBCategoryModel *model = self.categoryArray[indexPath.row];
-    /**
-     *  请求右侧内容数据
-     */
-    NSMutableDictionary *patameters = [NSMutableDictionary dictionary];
-    patameters[@"a"] = @"list";
-    patameters[@"c"] = @"subscribe";
-    patameters[@"category_id"] = @(model.id);
-    patameters[@"page"] = @1;
-    self.patameters = patameters;
     
-    [self.tool GET:@"https://api.budejie.com/api/api_open.php" parameters:patameters succeed:^(id responseObject) {
-        NSMutableArray *arrayUser = [NSMutableArray array];
-        for (NSDictionary *dict in responseObject[@"list"]) {
-            BBBUserModel *model = [BBBUserModel yy_modelWithDictionary:dict];
-            [arrayUser addObject:model];
-        }
-        self.userArray = arrayUser;
-        [self.userTableView reloadData];
-    } failure:^(NSError *error) {
+    BBBCategoryModel *categoryModel = self.categoryArray[indexPath.row];
+ 
+    
+    if (categoryModel.allUserArray.count) {
         
-    }];
-}
+//        [self.userTableView reloadData];
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (tableView == self.categoryTableView) {
-        return  44;
     } else {
-        return 88;
-    }
+        /**
+         *  请求右侧内容数据
+         */
+        NSMutableDictionary *patameters = [NSMutableDictionary dictionary];
+        patameters[@"a"] = @"list";
+        patameters[@"c"] = @"subscribe";
+        patameters[@"category_id"] = @(categoryModel.id);
+        patameters[@"page"] = @1;
+        self.patameters = patameters;
+        
+        [self.tool GET:@"https://api.budejie.com/api/api_open.php" parameters:patameters succeed:^(id responseObject) {
+            
+            NSMutableArray *arrayUser = [NSMutableArray array];
+            for (NSDictionary *dict in responseObject[@"list"]) {
+                BBBUserModel *model = [BBBUserModel yy_modelWithDictionary:dict];
+                [arrayUser addObject:model];
+            }
+            
+            self.userArray = arrayUser;
+//            [categoryModel.allUserArray addObjectsFromArray:self.userArray];
+            [self.userTableView reloadData];
 
+            
+        } failure:^(NSError *error) {
+            
+        }];
+    
+            }
+    
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 @end

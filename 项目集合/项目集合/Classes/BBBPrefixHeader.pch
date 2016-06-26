@@ -27,6 +27,6 @@
 #define BBBLog(...)
 #endif
 
-#define BBBLogFunc XMGLog(@"%s", __func__)
+#define BBBLogFunc BBBLog(@"%s", __func__)
 
 #endif /* BBBPrefixHeader_pch */
