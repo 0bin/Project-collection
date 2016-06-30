@@ -39,7 +39,11 @@ static const NSUInteger childViewCount = 7;
     [self addTitleScrollView];
 
 }
+- (void)viewDidDisappear
+{
+  NSLog(@"%s",__func__);
 
+}
 
 /**
  *   内容视图容器Content scroll

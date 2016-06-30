@@ -76,10 +76,13 @@ static NSString *const usersCell = @"usersCell";
     [self.userTableView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
     self.userTableView.rowHeight = 88;
    
-    
+  
 }
 
-
+- (void)viewDidAppear
+{
+  NSLog(@"%s",__func__);
+}
 
 - (void)loadCategoryData
 {

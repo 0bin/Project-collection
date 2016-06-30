@@ -15,9 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
-        BBBTabBarController *tabbar 
+        
+        //设置window根控制器并显示
+        window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        window?.backgroundColor = UIColor.whiteColor()
+        window?.rootViewController = BBBTabBarController()
+        window?.makeKeyAndVisible()
+        
         
         return true
     }
