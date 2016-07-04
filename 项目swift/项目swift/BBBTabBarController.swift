@@ -14,6 +14,7 @@ class BBBTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadVCName()
         self.tabBar.tintColor = UIColor.orangeColor()
         addChildVC()
         
@@ -28,6 +29,13 @@ class BBBTabBarController: UITabBarController {
         
     }
     
+    /**
+     获取子控制器VC的名字string
+     */
+    func loadVCName()  {
+        let path = NSBundle.mainBundle()
+        
+    }
     
     /**
      添加tabBar中间button
@@ -88,15 +96,20 @@ class BBBTabBarController: UITabBarController {
      - parameter imageName:            tabbarItem图片名
      - parameter highlightedImageName: tabbarItem高亮图片名
      */
-    func addChildVC(childVC:UIViewController,
+    func addChildVC(childVCName:String,
                     title:String,
                     imageName:String,
                     highlightedImageName:String){
+        //将string 转成 UIViewController类
+        let bundleName = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
+        let className: AnyClass? = NSClassFromString(bundleName + "." + childVCName)
+        let VCClass = className as! UIViewController.Type
+        //通过类创建控制器
+        let childVC = VCClass.init()
         //设置页面
         childVC.title = title
         childVC.tabBarItem.image = UIImage(named: imageName)
         childVC.tabBarItem.selectedImage = UIImage(named: highlightedImageName)
-        
         //添加导航栏
         let navVC = UINavigationController()
         navVC.addChildViewController(childVC)
