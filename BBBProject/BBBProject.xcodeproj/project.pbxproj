@@ -12,6 +12,10 @@
 		247B61791D2BC21500CEE15C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 247B61781D2BC21500CEE15C /* Assets.xcassets */; };
 		247B61871D2BC21500CEE15C /* BBBProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B61861D2BC21500CEE15C /* BBBProjectTests.m */; };
 		247B61921D2BC21500CEE15C /* BBBProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B61911D2BC21500CEE15C /* BBBProjectUITests.m */; };
+		247B61C01D2BC85000CEE15C /* BBBMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B61BF1D2BC85000CEE15C /* BBBMainTabBarController.m */; };
+		247B61C31D2BDF5500CEE15C /* BBBLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247B61C21D2BDF5500CEE15C /* BBBLoginController.m */; };
+		247B61C51D2BDFB200CEE15C /* moments.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 247B61C41D2BDFB200CEE15C /* moments.mp4 */; };
+		247B61C71D2BE1D200CEE15C /* keep.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 247B61C61D2BE1D200CEE15C /* keep.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,12 @@
 		247B618D1D2BC21500CEE15C /* BBBProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBBProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		247B61911D2BC21500CEE15C /* BBBProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBBProjectUITests.m; sourceTree = "<group>"; };
 		247B61931D2BC21500CEE15C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247B61BE1D2BC85000CEE15C /* BBBMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBMainTabBarController.h; sourceTree = "<group>"; };
+		247B61BF1D2BC85000CEE15C /* BBBMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBMainTabBarController.m; sourceTree = "<group>"; };
+		247B61C11D2BDF5500CEE15C /* BBBLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBLoginController.h; sourceTree = "<group>"; };
+		247B61C21D2BDF5500CEE15C /* BBBLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBLoginController.m; sourceTree = "<group>"; };
+		247B61C41D2BDFB200CEE15C /* moments.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moments.mp4; sourceTree = "<group>"; };
+		247B61C61D2BE1D200CEE15C /* keep.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = keep.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,7 @@
 			children = (
 				247B616F1D2BC21500CEE15C /* AppDelegate.h */,
 				247B61701D2BC21500CEE15C /* AppDelegate.m */,
+				247B619F1D2BC80600CEE15C /* Classes */,
 				247B616C1D2BC21500CEE15C /* Supporting Files */,
 			);
 			path = BBBProject;
@@ -104,6 +115,8 @@
 		247B616C1D2BC21500CEE15C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				247B61C61D2BE1D200CEE15C /* keep.mp4 */,
+				247B61C41D2BDFB200CEE15C /* moments.mp4 */,
 				247B61781D2BC21500CEE15C /* Assets.xcassets */,
 				247B617D1D2BC21500CEE15C /* Info.plist */,
 				247B616D1D2BC21500CEE15C /* main.m */,
@@ -127,6 +140,257 @@
 				247B61931D2BC21500CEE15C /* Info.plist */,
 			);
 			path = BBBProjectUITests;
+			sourceTree = "<group>";
+		};
+		247B619F1D2BC80600CEE15C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				247B61A01D2BC80600CEE15C /* BBBCategory */,
+				247B61A11D2BC80600CEE15C /* BBBLib */,
+				247B61A21D2BC80600CEE15C /* Five */,
+				247B61A61D2BC80600CEE15C /* Four */,
+				247B61AA1D2BC80600CEE15C /* Main */,
+				247B61AE1D2BC80600CEE15C /* One */,
+				247B61B21D2BC80600CEE15C /* Other */,
+				247B61B61D2BC80600CEE15C /* Three */,
+				247B61BA1D2BC80600CEE15C /* Two */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		247B61A01D2BC80600CEE15C /* BBBCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BBBCategory;
+			sourceTree = "<group>";
+		};
+		247B61A11D2BC80600CEE15C /* BBBLib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BBBLib;
+			sourceTree = "<group>";
+		};
+		247B61A21D2BC80600CEE15C /* Five */ = {
+			isa = PBXGroup;
+			children = (
+				247B61A31D2BC80600CEE15C /* Controller */,
+				247B61A41D2BC80600CEE15C /* Model */,
+				247B61A51D2BC80600CEE15C /* View */,
+			);
+			path = Five;
+			sourceTree = "<group>";
+		};
+		247B61A31D2BC80600CEE15C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		247B61A41D2BC80600CEE15C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		247B61A51D2BC80600CEE15C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		247B61A61D2BC80600CEE15C /* Four */ = {
+			isa = PBXGroup;
+			children = (
+				247B61A71D2BC80600CEE15C /* Controller */,
+				247B61A81D2BC80600CEE15C /* Model */,
+				247B61A91D2BC80600CEE15C /* View */,
+			);
+			path = Four;
+			sourceTree = "<group>";
+		};
+		247B61A71D2BC80600CEE15C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		247B61A81D2BC80600CEE15C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		247B61A91D2BC80600CEE15C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		247B61AA1D2BC80600CEE15C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				247B61AB1D2BC80600CEE15C /* Controller */,
+				247B61AC1D2BC80600CEE15C /* Model */,
+				247B61AD1D2BC80600CEE15C /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		247B61AB1D2BC80600CEE15C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				247B61C11D2BDF5500CEE15C /* BBBLoginController.h */,
+				247B61C21D2BDF5500CEE15C /* BBBLoginController.m */,
+				247B61BE1D2BC85000CEE15C /* BBBMainTabBarController.h */,
+				247B61BF1D2BC85000CEE15C /* BBBMainTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		247B61AC1D2BC80600CEE15C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		247B61AD1D2BC80600CEE15C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		247B61AE1D2BC80600CEE15C /* One */ = {
+			isa = PBXGroup;
+			children = (
+				247B61AF1D2BC80600CEE15C /* Controller */,
+				247B61B01D2BC80600CEE15C /* Model */,
+				247B61B11D2BC80600CEE15C /* View */,
+			);
+			path = One;
+			sourceTree = "<group>";
+		};
+		247B61AF1D2BC80600CEE15C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		247B61B01D2BC80600CEE15C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		247B61B11D2BC80600CEE15C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		247B61B21D2BC80600CEE15C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				247B61B31D2BC80600CEE15C /* Controller */,
+				247B61B41D2BC80600CEE15C /* Model */,
+				247B61B51D2BC80600CEE15C /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		247B61B31D2BC80600CEE15C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		247B61B41D2BC80600CEE15C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		247B61B51D2BC80600CEE15C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		247B61B61D2BC80600CEE15C /* Three */ = {
+			isa = PBXGroup;
+			children = (
+				247B61B71D2BC80600CEE15C /* Controller */,
+				247B61B81D2BC80600CEE15C /* Model */,
+				247B61B91D2BC80600CEE15C /* View */,
+			);
+			path = Three;
+			sourceTree = "<group>";
+		};
+		247B61B71D2BC80600CEE15C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		247B61B81D2BC80600CEE15C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		247B61B91D2BC80600CEE15C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		247B61BA1D2BC80600CEE15C /* Two */ = {
+			isa = PBXGroup;
+			children = (
+				247B61BB1D2BC80600CEE15C /* Controller */,
+				247B61BC1D2BC80600CEE15C /* Model */,
+				247B61BD1D2BC80600CEE15C /* View */,
+			);
+			path = Two;
+			sourceTree = "<group>";
+		};
+		247B61BB1D2BC80600CEE15C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		247B61BC1D2BC80600CEE15C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		247B61BD1D2BC80600CEE15C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +500,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				247B61791D2BC21500CEE15C /* Assets.xcassets in Resources */,
+				247B61C71D2BE1D200CEE15C /* keep.mp4 in Resources */,
+				247B61C51D2BDFB200CEE15C /* moments.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +526,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247B61C01D2BC85000CEE15C /* BBBMainTabBarController.m in Sources */,
 				247B61711D2BC21500CEE15C /* AppDelegate.m in Sources */,
+				247B61C31D2BDF5500CEE15C /* BBBLoginController.m in Sources */,
 				247B616E1D2BC21500CEE15C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +736,7 @@
 				247B61981D2BC21500CEE15C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		247B61991D2BC21500CEE15C /* Build configuration list for PBXNativeTarget "BBBProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +745,7 @@
 				247B619B1D2BC21500CEE15C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		247B619C1D2BC21500CEE15C /* Build configuration list for PBXNativeTarget "BBBProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +754,7 @@
 				247B619E1D2BC21500CEE15C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
