@@ -12,11 +12,11 @@
  页面类型
  */
 typedef enum {
-    BSBasicTypeAll = 1,
-    BSBasicTypeText = 29,
-    BSBasicTypeVedio = 41,
-    BSBasicTypeVoice = 31,
-    BSBasicTypePicture = 10,
-    BSBasicTypeRanking = 9,
-    BSBasicTypeOther = 13096,
+    BSBasicTypeAll = 1,      //全部
+    BSBasicTypeText = 29,    //文字
+    BSBasicTypeVedio = 41,   //视频
+    BSBasicTypeVoice = 31,   //声音
+    BSBasicTypePicture = 10, //图片
+    BSBasicTypeRanking = 9,  //全部
+    BSBasicTypeOther = 13096,//全部
 } BSBasicType;

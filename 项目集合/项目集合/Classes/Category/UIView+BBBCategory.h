@@ -10,13 +10,19 @@
 @interface UIView (BBBCategory)
 
 
-
+/**  宽  */
 @property (nonatomic, assign) CGFloat width;
+/**  高  */
 @property (nonatomic, assign) CGFloat height;
+/**  X  */
 @property (nonatomic, assign) CGFloat x;
+/**  Y  */
 @property (nonatomic, assign) CGFloat y;
+/**  size  */
 @property (nonatomic, assign) CGSize  size;
+/**  center.X  */
 @property (nonatomic, assign) CGFloat centerX;
+/**  center.Y   */
 @property (nonatomic, assign) CGFloat centerY;
 
 
