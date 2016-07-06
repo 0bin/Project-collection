@@ -9,32 +9,30 @@
 #import "BBBLoginController.h"
 #import <MediaPlayer/MediaPlayer.h>
 
+
 @interface BBBLoginController ()
+
 
 @end
 
 @implementation BBBLoginController
 
+
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
-
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"keep.mp4" withExtension:nil];
-    MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:url];
-//    [player setRepeatMode:MPMovieRepeatModeOne];
-//    [player setFullscreen:YES animated:YES];
-    player.controlStyle = MPMovieControlStyleNone;
-    player.view.frame = [UIScreen mainScreen].bounds;
-    [self.view addSubview:player.view];
+//    ///MPMoviePlayerViewController 播放带工具栏，需要在viewDidAppear内使用，<MediaPlayer/MediaPlayer.h>
+//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"keep.mp4" withExtension:nil];
+//    MPMoviePlayerViewController *playerVC = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
     
-    [player play];
+   
+//    [self presentMoviePlayerViewControllerAnimated:playerVC];
 }
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -47,13 +45,34 @@
 //    [self.view.layer addSublayer:layer];
 //    [player play];
     
-///MPMoviePlayerViewController 播放 带控制按钮，需要在viewDidAppear内使用，<MediaPlayer/MediaPlayer.h>
-//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"keep.mp4" withExtension:nil];
-//    MPMoviePlayerViewController *playerVC = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
-//    [self presentMoviePlayerViewControllerAnimated:playerVC];
-    
 
+ 
     
+///9.0 后弃用，MPMoviePlayerController 播放带工具栏，需要在viewDidAppear内使用，<MediaPlayer/MediaPlayer.h>，需要强引用
+//@property (strong, nonatomic) MPMoviePlayerController *playerController;
+//    - (MPMoviePlayerController *)playerController
+//    {
+//        if (_playerController == nil) {
+//            NSURL *url = [[NSBundle mainBundle] URLForResource:@"keep.mp4" withExtension:nil];
+//            _playerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
+//            _playerController.view.frame = [UIScreen mainScreen].bounds;
+//            // 指定加载类型，会提高播放效率
+//            [_playerController setMovieSourceType:MPMovieSourceTypeFile];
+//            // 全屏
+//            [_playerController setFullscreen:YES];
+//            // 重复
+//            [_playerController setRepeatMode:MPMovieRepeatModeOne];
+//            // 取消工具栏
+//            [_playerController setControlStyle:MPMovieControlStyleNone];
+//            
+//            [self.window addSubview:_playerController.view];
+//            
+//            
+//            
+//        }
+//        return _playerController;
+//    }
+//        [self.playerController play];
     
     
     

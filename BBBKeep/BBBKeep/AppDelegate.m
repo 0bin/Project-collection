@@ -1,15 +1,12 @@
 //
 //  AppDelegate.m
-//  BBBProject
+//  BBBKeep
 //
-//  Created by LinBin on 16/7/5.
+//  Created by LinBin on 16/7/6.
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BBBMainTabBarController.h"
-#import "BBBLoginController.h"
-#import <MediaPlayer/MediaPlayer.h>
 
 @interface AppDelegate ()
 
@@ -17,36 +14,9 @@
 
 @implementation AppDelegate
 
-/**
- *  启动动画
- */
--(void)showAnimation
-{
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"keep.mp4" withExtension:nil];
-    if (url) {
-        MPMoviePlayerViewController *playerVC = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
-        [playerVC.moviePlayer setControlStyle:MPMovieControlStyleNone];
-        [playerVC.moviePlayer setFullscreen:YES];
-        self.window.rootViewController = playerVC;
-        [playerVC.moviePlayer play];
-        
-        [[NSNotificationCenter defaultCenter] addObserverForName:MPMoviePlayerPlaybackDidFinishNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-            self.window.rootViewController = [[BBBLoginController alloc] init];
-        }];
-    }
-}
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-//    self.window.rootViewController = [[BBBLoginController alloc] init];
-    [self showAnimation];
-//    self.window.rootViewController = [[BBBMainTabBarController alloc] init];
-    [self.window makeKeyAndVisible];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
