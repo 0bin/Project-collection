@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +16,33 @@
 
 @implementation AppDelegate
 
+/**
+ *  启动动画
+ */
+-(void)showAnimation
+{
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"keep.mp4" withExtension:nil];
+    if (url) {
+        MPMoviePlayerViewController *playerVC = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
+        [playerVC.moviePlayer setControlStyle:MPMovieControlStyleNone];
+        [playerVC.moviePlayer setFullscreen:YES];
+        self.window.rootViewController = playerVC;
+        [playerVC.moviePlayer play];
+        
+        [[NSNotificationCenter defaultCenter] addObserverForName:MPMoviePlayerPlaybackDidFinishNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+            self.window.rootViewController = [[ViewController alloc] init];
+        }];
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self showAnimation];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

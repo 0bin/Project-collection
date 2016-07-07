@@ -1,15 +1,12 @@
 //
 //  AppDelegate.m
-//  BBBProject
+//  block
 //
-//  Created by LinBin on 16/7/5.
+//  Created by LinBin on 16/7/6.
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BBBMainTabBarController.h"
-#import "BBBLoginController.h"
-#import <MediaPlayer/MediaPlayer.h>
 
 @interface AppDelegate ()
 
@@ -18,12 +15,8 @@
 @implementation AppDelegate
 
 
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
