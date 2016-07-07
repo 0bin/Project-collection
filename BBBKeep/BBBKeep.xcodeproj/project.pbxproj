@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241BFDAB1D2E926C00EBAFFE /* BBBAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241BFDAA1D2E926C00EBAFFE /* BBBAnimationView.m */; };
+		241BFDB11D2E929B00EBAFFE /* BBBAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241BFDB01D2E929B00EBAFFE /* BBBAnimationView.xib */; };
 		2498EB7B1D2C9B3000D07944 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2498EB7A1D2C9B3000D07944 /* main.m */; };
 		2498EB7E1D2C9B3000D07944 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2498EB7D1D2C9B3000D07944 /* AppDelegate.m */; };
 		2498EB811D2C9B3000D07944 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2498EB801D2C9B3000D07944 /* ViewController.m */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		241BFDA91D2E926C00EBAFFE /* BBBAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBAnimationView.h; sourceTree = "<group>"; };
+		241BFDAA1D2E926C00EBAFFE /* BBBAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBAnimationView.m; sourceTree = "<group>"; };
+		241BFDB01D2E929B00EBAFFE /* BBBAnimationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBBAnimationView.xib; sourceTree = "<group>"; };
 		2498EB761D2C9B3000D07944 /* BBBKeep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBBKeep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2498EB7A1D2C9B3000D07944 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2498EB7C1D2C9B3000D07944 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +118,9 @@
 				2498EB871D2C9B3000D07944 /* LaunchScreen.storyboard */,
 				2498EB8A1D2C9B3000D07944 /* Info.plist */,
 				2498EB791D2C9B3000D07944 /* Supporting Files */,
+				241BFDA91D2E926C00EBAFFE /* BBBAnimationView.h */,
+				241BFDAA1D2E926C00EBAFFE /* BBBAnimationView.m */,
+				241BFDB01D2E929B00EBAFFE /* BBBAnimationView.xib */,
 			);
 			path = BBBKeep;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2498EBAD1D2C9B4700D07944 /* keep.mp4 in Resources */,
+				241BFDB11D2E929B00EBAFFE /* BBBAnimationView.xib in Resources */,
 				2498EB891D2C9B3000D07944 /* LaunchScreen.storyboard in Resources */,
 				2498EB861D2C9B3000D07944 /* Assets.xcassets in Resources */,
 				2498EB841D2C9B3000D07944 /* Main.storyboard in Resources */,
@@ -279,6 +288,7 @@
 			files = (
 				2498EB811D2C9B3000D07944 /* ViewController.m in Sources */,
 				2498EB7E1D2C9B3000D07944 /* AppDelegate.m in Sources */,
+				241BFDAB1D2E926C00EBAFFE /* BBBAnimationView.m in Sources */,
 				2498EB7B1D2C9B3000D07944 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BBBKeep/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LB.BBBKeep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BBBKeep/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LB.BBBKeep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +515,7 @@
 				2498EBA51D2C9B3000D07944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2498EBA61D2C9B3000D07944 /* Build configuration list for PBXNativeTarget "BBBKeepTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +524,7 @@
 				2498EBA81D2C9B3000D07944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2498EBA91D2C9B3000D07944 /* Build configuration list for PBXNativeTarget "BBBKeepUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +533,7 @@
 				2498EBAB1D2C9B3000D07944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

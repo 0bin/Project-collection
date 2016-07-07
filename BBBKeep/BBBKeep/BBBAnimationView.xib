@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BBBAnimationView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MX3-EJ-TcB">
+                    <rect key="frame" x="20" y="516" width="270" height="44"/>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="d7Z-Oq-qq0"/>
+                    </constraints>
+                    <state key="normal" title="注册">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keep" translatesAutoresizingMaskIntoConstraints="NO" id="k8L-X1-QiF">
+                    <rect key="frame" x="228" y="80" width="144" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="144" id="635-5Q-CQA"/>
+                        <constraint firstAttribute="height" constant="64" id="TUN-ef-CeS"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfB-Nu-hDI">
+                    <rect key="frame" x="310" y="516" width="270" height="44"/>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="登陆">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="MX3-EJ-TcB" secondAttribute="bottom" constant="40" id="06w-ev-Kli"/>
+                <constraint firstItem="MX3-EJ-TcB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="19j-a7-LAR"/>
+                <constraint firstItem="IfB-Nu-hDI" firstAttribute="leading" secondItem="MX3-EJ-TcB" secondAttribute="trailing" constant="20" id="Aom-g2-okM"/>
+                <constraint firstItem="k8L-X1-QiF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EVK-56-3sT"/>
+                <constraint firstItem="k8L-X1-QiF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="NJS-4G-4Qb"/>
+                <constraint firstItem="IfB-Nu-hDI" firstAttribute="width" secondItem="MX3-EJ-TcB" secondAttribute="width" id="UOb-Y6-odl"/>
+                <constraint firstItem="IfB-Nu-hDI" firstAttribute="height" secondItem="MX3-EJ-TcB" secondAttribute="height" id="Wku-PY-ek0"/>
+                <constraint firstAttribute="bottom" secondItem="IfB-Nu-hDI" secondAttribute="bottom" constant="40" id="dNf-um-42h"/>
+                <constraint firstAttribute="trailing" secondItem="IfB-Nu-hDI" secondAttribute="trailing" constant="20" id="i1Y-Sz-YT9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="keep" width="144" height="64"/>
+    </resources>
+</document>

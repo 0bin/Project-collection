@@ -7,26 +7,41 @@
 //
 
 #import "ViewController.h"
+#import "BBBAnimationView.h"
 
-@interface ViewController ()
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
+
+@interface ViewController()<AVPlayerViewControllerDelegate>
 
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self.view setBackgroundColor:[UIColor redColor]];
-    UILabel *label = [[UILabel alloc] init];
-    [label setText:@"Home"];
-    [label setFrame:CGRectMake(100, 200, 80, 80)];
-    [self.view addSubview:label];
+
+
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"keep.mp4" withExtension:nil];
+    
+    AVPlayerViewController *playerVC = [[AVPlayerViewController alloc] init];
+    [playerVC setVideoGravity:@"AVLayerVideoGravityResizeAspectFill"];
+    [playerVC setShowsPlaybackControls:NO];
+    playerVC.player = [[AVPlayer alloc]initWithURL:url];
+    playerVC.view.frame = [UIScreen mainScreen].bounds;
+    [self addChildViewController:playerVC];
+    [self.view addSubview:playerVC.view];
+    [playerVC.player play];
+    
+    BBBAnimationView *animationView = [BBBAnimationView animationView];
+    animationView.frame = [UIScreen mainScreen].bounds;
+    [self.view addSubview:animationView];
+    
+
+ 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end
