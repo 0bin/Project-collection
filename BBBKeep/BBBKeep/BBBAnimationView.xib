@@ -35,6 +35,14 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xR-bC-cTM">
+                    <rect key="frame" x="200" y="452" width="200" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="UmE-pZ-ch8"/>
+                        <constraint firstAttribute="width" constant="200" id="a9Z-6a-htD"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
@@ -42,13 +50,18 @@
                 <constraint firstItem="MX3-EJ-TcB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="19j-a7-LAR"/>
                 <constraint firstItem="IfB-Nu-hDI" firstAttribute="leading" secondItem="MX3-EJ-TcB" secondAttribute="trailing" constant="20" id="Aom-g2-okM"/>
                 <constraint firstItem="k8L-X1-QiF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EVK-56-3sT"/>
+                <constraint firstItem="IfB-Nu-hDI" firstAttribute="top" secondItem="0xR-bC-cTM" secondAttribute="bottom" constant="20" id="Jel-Ur-o9j"/>
                 <constraint firstItem="k8L-X1-QiF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="NJS-4G-4Qb"/>
                 <constraint firstItem="IfB-Nu-hDI" firstAttribute="width" secondItem="MX3-EJ-TcB" secondAttribute="width" id="UOb-Y6-odl"/>
                 <constraint firstItem="IfB-Nu-hDI" firstAttribute="height" secondItem="MX3-EJ-TcB" secondAttribute="height" id="Wku-PY-ek0"/>
                 <constraint firstAttribute="bottom" secondItem="IfB-Nu-hDI" secondAttribute="bottom" constant="40" id="dNf-um-42h"/>
                 <constraint firstAttribute="trailing" secondItem="IfB-Nu-hDI" secondAttribute="trailing" constant="20" id="i1Y-Sz-YT9"/>
+                <constraint firstItem="0xR-bC-cTM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oWG-lZ-Zub"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="scrollView" destination="0xR-bC-cTM" id="Mw1-Hs-JKd"/>
+            </connections>
         </view>
     </objects>
     <resources>
