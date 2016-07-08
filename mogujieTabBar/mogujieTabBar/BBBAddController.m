@@ -1,23 +1,27 @@
 //
-//  BBBViewController.m
+//  BBBAddController.m
 //  mogujieTabBar
 //
 //  Created by LinBin on 16/7/8.
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
-#import "BBBViewController.h"
+#import "BBBAddController.h"
 
-@interface BBBViewController ()
+@interface BBBAddController ()
 
 @end
 
-@implementation BBBViewController
+@implementation BBBAddController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor grayColor];
+    // Do any additional setup after loading the view from its nib.
+}
+- (IBAction)backButtonClick:(UIButton *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {

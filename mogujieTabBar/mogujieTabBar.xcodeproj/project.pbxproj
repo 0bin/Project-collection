@@ -15,6 +15,8 @@
 		2443851B1D2F457C00860794 /* BBBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2443851A1D2F457C00860794 /* BBBTabBarController.m */; };
 		2443851E1D2F47ED00860794 /* BBBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2443851D1D2F47ED00860794 /* BBBNavigationController.m */; };
 		244385211D2F488400860794 /* BBBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244385201D2F488400860794 /* BBBViewController.m */; };
+		24E248A51D2F91210052B3EA /* BBBAddController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E248A31D2F91210052B3EA /* BBBAddController.m */; };
+		24E248A61D2F91210052B3EA /* BBBAddController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E248A41D2F91210052B3EA /* BBBAddController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		2443851D1D2F47ED00860794 /* BBBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBNavigationController.m; sourceTree = "<group>"; };
 		2443851F1D2F488400860794 /* BBBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBViewController.h; sourceTree = "<group>"; };
 		244385201D2F488400860794 /* BBBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBViewController.m; sourceTree = "<group>"; };
+		24E248A21D2F91210052B3EA /* BBBAddController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBAddController.h; sourceTree = "<group>"; };
+		24E248A31D2F91210052B3EA /* BBBAddController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBAddController.m; sourceTree = "<group>"; };
+		24E248A41D2F91210052B3EA /* BBBAddController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBBAddController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,9 @@
 				244384E61D2F3D4C00860794 /* Supporting Files */,
 				2443851F1D2F488400860794 /* BBBViewController.h */,
 				244385201D2F488400860794 /* BBBViewController.m */,
+				24E248A21D2F91210052B3EA /* BBBAddController.h */,
+				24E248A31D2F91210052B3EA /* BBBAddController.m */,
+				24E248A41D2F91210052B3EA /* BBBAddController.xib */,
 			);
 			path = mogujieTabBar;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E248A61D2F91210052B3EA /* BBBAddController.xib in Resources */,
 				244384F31D2F3D4C00860794 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +288,7 @@
 				2443851B1D2F457C00860794 /* BBBTabBarController.m in Sources */,
 				244384EB1D2F3D4C00860794 /* AppDelegate.m in Sources */,
 				2443851E1D2F47ED00860794 /* BBBNavigationController.m in Sources */,
+				24E248A51D2F91210052B3EA /* BBBAddController.m in Sources */,
 				244384E81D2F3D4C00860794 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +494,7 @@
 				244385121D2F3D4C00860794 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		244385131D2F3D4C00860794 /* Build configuration list for PBXNativeTarget "mogujieTabBarTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +503,7 @@
 				244385151D2F3D4C00860794 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		244385161D2F3D4C00860794 /* Build configuration list for PBXNativeTarget "mogujieTabBarUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +512,7 @@
 				244385181D2F3D4C00860794 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

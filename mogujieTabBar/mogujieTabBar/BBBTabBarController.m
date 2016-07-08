@@ -9,6 +9,7 @@
 #import "BBBTabBarController.h"
 #import "BBBViewController.h"
 #import "BBBNavigationController.h"
+#import "BBBAddController.h"
 
 
 @interface BBBTabBarController ()<UITabBarDelegate>
@@ -56,9 +57,17 @@
     
     addButton.frame = CGRectMake(0, 0, width, height);
     addButton.center = CGPointMake(centerX, centerY);
-
+    [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.tabBar addSubview:addButton];
     self.addButton = addButton;
+
+}
+
+
+- (void)addButtonClick
+{
+    BBBAddController *addVC = [[BBBAddController alloc] init];
+    [self presentViewController:addVC animated:YES completion:nil];
 
 }
 
