@@ -1,14 +1,13 @@
 //
 //  AppDelegate.m
-//  BBBProject
+//  mogujieTabBar
 //
-//  Created by LinBin on 16/7/5.
+//  Created by LinBin on 16/7/8.
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BBBMainTabBarController.h"
-
+#import "BBBTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,14 +16,12 @@
 @implementation AppDelegate
 
 
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[BBBMainTabBarController alloc] init];
+    BBBTabBarController *tabBar = [[BBBTabBarController alloc] init];
+    self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
