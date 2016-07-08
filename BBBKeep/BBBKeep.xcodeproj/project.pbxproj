@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2401C9A11D2F37FF00CBF678 /* keep.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2401C9A01D2F37FF00CBF678 /* keep.gif */; };
 		241BFDAB1D2E926C00EBAFFE /* BBBAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241BFDAA1D2E926C00EBAFFE /* BBBAnimationView.m */; };
 		241BFDB11D2E929B00EBAFFE /* BBBAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241BFDB01D2E929B00EBAFFE /* BBBAnimationView.xib */; };
 		2498EB7B1D2C9B3000D07944 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2498EB7A1D2C9B3000D07944 /* main.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2401C9A01D2F37FF00CBF678 /* keep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = keep.gif; sourceTree = "<group>"; };
 		241BFDA91D2E926C00EBAFFE /* BBBAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBAnimationView.h; sourceTree = "<group>"; };
 		241BFDAA1D2E926C00EBAFFE /* BBBAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBAnimationView.m; sourceTree = "<group>"; };
 		241BFDB01D2E929B00EBAFFE /* BBBAnimationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBBAnimationView.xib; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		2498EB781D2C9B3000D07944 /* BBBKeep */ = {
 			isa = PBXGroup;
 			children = (
+				2401C9A01D2F37FF00CBF678 /* keep.gif */,
 				2498EBAC1D2C9B4700D07944 /* keep.mp4 */,
 				2498EB7C1D2C9B3000D07944 /* AppDelegate.h */,
 				2498EB7D1D2C9B3000D07944 /* AppDelegate.m */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2498EBAD1D2C9B4700D07944 /* keep.mp4 in Resources */,
+				2401C9A11D2F37FF00CBF678 /* keep.gif in Resources */,
 				241BFDB11D2E929B00EBAFFE /* BBBAnimationView.xib in Resources */,
 				2498EB891D2C9B3000D07944 /* LaunchScreen.storyboard in Resources */,
 				2498EB861D2C9B3000D07944 /* Assets.xcassets in Resources */,
