@@ -1,15 +1,12 @@
 //
 //  AppDelegate.m
-//  BBBProject
+//  BBBQuart2D
 //
-//  Created by LinBin on 16/7/5.
+//  Created by LinBin on 16/7/9.
 //  Copyright © 2016年 LinBin. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BBBMainTabBarController.h"
-#import "BBBLoginController.h"
-
 
 @interface AppDelegate ()
 
@@ -18,14 +15,8 @@
 @implementation AppDelegate
 
 
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[BBBLoginController alloc] init];
-    [self.window makeKeyAndVisible];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 

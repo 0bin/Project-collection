@@ -18,12 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor grayColor];
+    
+    UIView animateWithDuration:<#(NSTimeInterval)#> animations:<#^(void)animations#>
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 /*
 #pragma mark - Navigation
