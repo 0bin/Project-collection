@@ -17,6 +17,8 @@
 		242437F61D30D6F8009C9462 /* BBBQuart2DUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437F51D30D6F8009C9462 /* BBBQuart2DUITests.m */; };
 		242438051D30D710009C9462 /* BBBQuartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 242438041D30D710009C9462 /* BBBQuartView.m */; };
 		242438071D30E43A009C9462 /* Quart2D.gif in Resources */ = {isa = PBXBuildFile; fileRef = 242438061D30E43A009C9462 /* Quart2D.gif */; };
+		249C5F881D3382EA001543CE /* BBBQview.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C5F871D3382EA001543CE /* BBBQview.m */; };
+		249C5F8B1D338319001543CE /* BBBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C5F8A1D338319001543CE /* BBBViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		242438031D30D710009C9462 /* BBBQuartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBQuartView.h; sourceTree = "<group>"; };
 		242438041D30D710009C9462 /* BBBQuartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBQuartView.m; sourceTree = "<group>"; };
 		242438061D30E43A009C9462 /* Quart2D.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Quart2D.gif; sourceTree = "<group>"; };
+		249C5F861D3382EA001543CE /* BBBQview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBQview.h; sourceTree = "<group>"; };
+		249C5F871D3382EA001543CE /* BBBQview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBQview.m; sourceTree = "<group>"; };
+		249C5F891D338318001543CE /* BBBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBViewController.h; sourceTree = "<group>"; };
+		249C5F8A1D338319001543CE /* BBBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,10 @@
 				242437D01D30D6F8009C9462 /* Supporting Files */,
 				242438031D30D710009C9462 /* BBBQuartView.h */,
 				242438041D30D710009C9462 /* BBBQuartView.m */,
+				249C5F861D3382EA001543CE /* BBBQview.h */,
+				249C5F871D3382EA001543CE /* BBBQview.m */,
+				249C5F891D338318001543CE /* BBBViewController.h */,
+				249C5F8A1D338319001543CE /* BBBViewController.m */,
 			);
 			path = BBBQuart2D;
 			sourceTree = "<group>";
@@ -283,7 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				242437D81D30D6F8009C9462 /* ViewController.m in Sources */,
+				249C5F8B1D338319001543CE /* BBBViewController.m in Sources */,
 				242437D51D30D6F8009C9462 /* AppDelegate.m in Sources */,
+				249C5F881D3382EA001543CE /* BBBQview.m in Sources */,
 				242437D21D30D6F8009C9462 /* main.m in Sources */,
 				242438051D30D710009C9462 /* BBBQuartView.m in Sources */,
 			);

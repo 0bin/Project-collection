@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		249C5F821D332B29001543CE /* UIViewAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C5F811D332B29001543CE /* UIViewAnimationController.m */; };
 		24E7F5721D311EA100358798 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7F5711D311EA100358798 /* main.m */; };
 		24E7F5751D311EA100358798 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7F5741D311EA100358798 /* AppDelegate.m */; };
 		24E7F5781D311EA100358798 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7F5771D311EA100358798 /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		24E7F5801D311EA100358798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E7F57E1D311EA100358798 /* LaunchScreen.storyboard */; };
 		24E7F58B1D311EA100358798 /* BBBAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7F58A1D311EA100358798 /* BBBAnimationTests.m */; };
 		24E7F5961D311EA100358798 /* BBBAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7F5951D311EA100358798 /* BBBAnimationUITests.m */; };
-		24E7F5A51D3134D000358798 /* BBBPositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7F5A41D3134D000358798 /* BBBPositionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		249C5F801D332B29001543CE /* UIViewAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAnimationController.h; sourceTree = "<group>"; };
+		249C5F811D332B29001543CE /* UIViewAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationController.m; sourceTree = "<group>"; };
 		24E7F56D1D311EA100358798 /* BBBAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBBAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E7F5711D311EA100358798 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24E7F5731D311EA100358798 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		24E7F5911D311EA100358798 /* BBBAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBBAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E7F5951D311EA100358798 /* BBBAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBBAnimationUITests.m; sourceTree = "<group>"; };
 		24E7F5971D311EA100358798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24E7F5A31D3134D000358798 /* BBBPositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBPositionViewController.h; sourceTree = "<group>"; };
-		24E7F5A41D3134D000358798 /* BBBPositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBPositionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 				24E7F57E1D311EA100358798 /* LaunchScreen.storyboard */,
 				24E7F5811D311EA100358798 /* Info.plist */,
 				24E7F5701D311EA100358798 /* Supporting Files */,
-				24E7F5A31D3134D000358798 /* BBBPositionViewController.h */,
-				24E7F5A41D3134D000358798 /* BBBPositionViewController.m */,
+				249C5F801D332B29001543CE /* UIViewAnimationController.h */,
+				249C5F811D332B29001543CE /* UIViewAnimationController.m */,
 			);
 			path = BBBAnimation;
 			sourceTree = "<group>";
@@ -278,8 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E7F5A51D3134D000358798 /* BBBPositionViewController.m in Sources */,
 				24E7F5781D311EA100358798 /* ViewController.m in Sources */,
+				249C5F821D332B29001543CE /* UIViewAnimationController.m in Sources */,
 				24E7F5751D311EA100358798 /* AppDelegate.m in Sources */,
 				24E7F5721D311EA100358798 /* main.m in Sources */,
 			);
@@ -505,6 +505,7 @@
 				24E7F59C1D311EA100358798 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24E7F59D1D311EA100358798 /* Build configuration list for PBXNativeTarget "BBBAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +514,7 @@
 				24E7F59F1D311EA100358798 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24E7F5A01D311EA100358798 /* Build configuration list for PBXNativeTarget "BBBAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +523,7 @@
 				24E7F5A21D311EA100358798 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
