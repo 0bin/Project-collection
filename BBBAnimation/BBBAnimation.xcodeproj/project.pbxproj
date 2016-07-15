@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		248AF55E1D38B4C2003E616A /* Quart2DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AF55D1D38B4C2003E616A /* Quart2DViewController.m */; };
+		24990CA71D35E9DE00BBBEC9 /* CAAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24990CA61D35E9DE00BBBEC9 /* CAAnimationViewController.m */; };
 		249C5F821D332B29001543CE /* UIViewAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C5F811D332B29001543CE /* UIViewAnimationController.m */; };
 		24E7F5721D311EA100358798 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7F5711D311EA100358798 /* main.m */; };
 		24E7F5751D311EA100358798 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E7F5741D311EA100358798 /* AppDelegate.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		248AF55C1D38B4C2003E616A /* Quart2DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quart2DViewController.h; sourceTree = "<group>"; };
+		248AF55D1D38B4C2003E616A /* Quart2DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quart2DViewController.m; sourceTree = "<group>"; };
+		24990CA51D35E9DE00BBBEC9 /* CAAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAAnimationViewController.h; sourceTree = "<group>"; };
+		24990CA61D35E9DE00BBBEC9 /* CAAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAAnimationViewController.m; sourceTree = "<group>"; };
 		249C5F801D332B29001543CE /* UIViewAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAnimationController.h; sourceTree = "<group>"; };
 		249C5F811D332B29001543CE /* UIViewAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAnimationController.m; sourceTree = "<group>"; };
 		24E7F56D1D311EA100358798 /* BBBAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBBAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +121,10 @@
 				24E7F5701D311EA100358798 /* Supporting Files */,
 				249C5F801D332B29001543CE /* UIViewAnimationController.h */,
 				249C5F811D332B29001543CE /* UIViewAnimationController.m */,
+				24990CA51D35E9DE00BBBEC9 /* CAAnimationViewController.h */,
+				24990CA61D35E9DE00BBBEC9 /* CAAnimationViewController.m */,
+				248AF55C1D38B4C2003E616A /* Quart2DViewController.h */,
+				248AF55D1D38B4C2003E616A /* Quart2DViewController.m */,
 			);
 			path = BBBAnimation;
 			sourceTree = "<group>";
@@ -279,8 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E7F5781D311EA100358798 /* ViewController.m in Sources */,
+				24990CA71D35E9DE00BBBEC9 /* CAAnimationViewController.m in Sources */,
 				249C5F821D332B29001543CE /* UIViewAnimationController.m in Sources */,
 				24E7F5751D311EA100358798 /* AppDelegate.m in Sources */,
+				248AF55E1D38B4C2003E616A /* Quart2DViewController.m in Sources */,
 				24E7F5721D311EA100358798 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

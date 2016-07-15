@@ -9,15 +9,11 @@
 /* Begin PBXBuildFile section */
 		242437D21D30D6F8009C9462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437D11D30D6F8009C9462 /* main.m */; };
 		242437D51D30D6F8009C9462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437D41D30D6F8009C9462 /* AppDelegate.m */; };
-		242437D81D30D6F8009C9462 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437D71D30D6F8009C9462 /* ViewController.m */; };
-		242437DB1D30D6F8009C9462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242437D91D30D6F8009C9462 /* Main.storyboard */; };
 		242437DD1D30D6F8009C9462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242437DC1D30D6F8009C9462 /* Assets.xcassets */; };
 		242437E01D30D6F8009C9462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242437DE1D30D6F8009C9462 /* LaunchScreen.storyboard */; };
 		242437EB1D30D6F8009C9462 /* BBBQuart2DTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437EA1D30D6F8009C9462 /* BBBQuart2DTests.m */; };
 		242437F61D30D6F8009C9462 /* BBBQuart2DUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437F51D30D6F8009C9462 /* BBBQuart2DUITests.m */; };
-		242438051D30D710009C9462 /* BBBQuartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 242438041D30D710009C9462 /* BBBQuartView.m */; };
-		242438071D30E43A009C9462 /* Quart2D.gif in Resources */ = {isa = PBXBuildFile; fileRef = 242438061D30E43A009C9462 /* Quart2D.gif */; };
-		249C5F881D3382EA001543CE /* BBBQview.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C5F871D3382EA001543CE /* BBBQview.m */; };
+		248AF5AE1D38D716003E616A /* BBBQuart2DView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AF5AD1D38D716003E616A /* BBBQuart2DView.m */; };
 		249C5F8B1D338319001543CE /* BBBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C5F8A1D338319001543CE /* BBBViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -43,9 +39,6 @@
 		242437D11D30D6F8009C9462 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		242437D31D30D6F8009C9462 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		242437D41D30D6F8009C9462 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		242437D61D30D6F8009C9462 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		242437D71D30D6F8009C9462 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		242437DA1D30D6F8009C9462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		242437DC1D30D6F8009C9462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		242437DF1D30D6F8009C9462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		242437E11D30D6F8009C9462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,11 +48,8 @@
 		242437F11D30D6F8009C9462 /* BBBQuart2DUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBBQuart2DUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		242437F51D30D6F8009C9462 /* BBBQuart2DUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBBQuart2DUITests.m; sourceTree = "<group>"; };
 		242437F71D30D6F8009C9462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		242438031D30D710009C9462 /* BBBQuartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBQuartView.h; sourceTree = "<group>"; };
-		242438041D30D710009C9462 /* BBBQuartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBQuartView.m; sourceTree = "<group>"; };
-		242438061D30E43A009C9462 /* Quart2D.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Quart2D.gif; sourceTree = "<group>"; };
-		249C5F861D3382EA001543CE /* BBBQview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBQview.h; sourceTree = "<group>"; };
-		249C5F871D3382EA001543CE /* BBBQview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBQview.m; sourceTree = "<group>"; };
+		248AF5AC1D38D716003E616A /* BBBQuart2DView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBQuart2DView.h; sourceTree = "<group>"; };
+		248AF5AD1D38D716003E616A /* BBBQuart2DView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBQuart2DView.m; sourceTree = "<group>"; };
 		249C5F891D338318001543CE /* BBBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBViewController.h; sourceTree = "<group>"; };
 		249C5F8A1D338319001543CE /* BBBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,22 +102,13 @@
 		242437CF1D30D6F8009C9462 /* BBBQuart2D */ = {
 			isa = PBXGroup;
 			children = (
-				242438061D30E43A009C9462 /* Quart2D.gif */,
+				248AF5AC1D38D716003E616A /* BBBQuart2DView.h */,
+				248AF5AD1D38D716003E616A /* BBBQuart2DView.m */,
 				242437D31D30D6F8009C9462 /* AppDelegate.h */,
 				242437D41D30D6F8009C9462 /* AppDelegate.m */,
-				242437D61D30D6F8009C9462 /* ViewController.h */,
-				242437D71D30D6F8009C9462 /* ViewController.m */,
-				242437D91D30D6F8009C9462 /* Main.storyboard */,
-				242437DC1D30D6F8009C9462 /* Assets.xcassets */,
-				242437DE1D30D6F8009C9462 /* LaunchScreen.storyboard */,
-				242437E11D30D6F8009C9462 /* Info.plist */,
-				242437D01D30D6F8009C9462 /* Supporting Files */,
-				242438031D30D710009C9462 /* BBBQuartView.h */,
-				242438041D30D710009C9462 /* BBBQuartView.m */,
-				249C5F861D3382EA001543CE /* BBBQview.h */,
-				249C5F871D3382EA001543CE /* BBBQview.m */,
 				249C5F891D338318001543CE /* BBBViewController.h */,
 				249C5F8A1D338319001543CE /* BBBViewController.m */,
+				242437D01D30D6F8009C9462 /* Supporting Files */,
 			);
 			path = BBBQuart2D;
 			sourceTree = "<group>";
@@ -135,6 +116,9 @@
 		242437D01D30D6F8009C9462 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				242437DC1D30D6F8009C9462 /* Assets.xcassets */,
+				242437DE1D30D6F8009C9462 /* LaunchScreen.storyboard */,
+				242437E11D30D6F8009C9462 /* Info.plist */,
 				242437D11D30D6F8009C9462 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -266,8 +250,6 @@
 			files = (
 				242437E01D30D6F8009C9462 /* LaunchScreen.storyboard in Resources */,
 				242437DD1D30D6F8009C9462 /* Assets.xcassets in Resources */,
-				242438071D30E43A009C9462 /* Quart2D.gif in Resources */,
-				242437DB1D30D6F8009C9462 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,12 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				242437D81D30D6F8009C9462 /* ViewController.m in Sources */,
 				249C5F8B1D338319001543CE /* BBBViewController.m in Sources */,
 				242437D51D30D6F8009C9462 /* AppDelegate.m in Sources */,
-				249C5F881D3382EA001543CE /* BBBQview.m in Sources */,
 				242437D21D30D6F8009C9462 /* main.m in Sources */,
-				242438051D30D710009C9462 /* BBBQuartView.m in Sources */,
+				248AF5AE1D38D716003E616A /* BBBQuart2DView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,14 +313,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		242437D91D30D6F8009C9462 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				242437DA1D30D6F8009C9462 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		242437DE1D30D6F8009C9462 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
