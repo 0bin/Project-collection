@@ -14,6 +14,8 @@
 
 @implementation BBBQuart2DView
 
+   static CGFloat changeY = 0;
+
 - (void)setProgroessValue:(CGFloat)progroessValue
 {
     _progroessValue = progroessValue;
@@ -37,6 +39,18 @@
     UIImage *image = [UIImage imageNamed:@"123"];
     [image drawInRect:CGRectMake(200, 400, 66, 66)];
     
+    UIImage *image1 = [UIImage imageNamed:@"123"];
+    [image1 drawInRect:CGRectMake(100, changeY, 44, 44)];
+    
+    UIImage *image2 = [UIImage imageNamed:@"123"];
+    [image2 drawInRect:CGRectMake(200, changeY, 44, 44)];
+    
+    changeY += 5;
+    if (changeY > rect.size.height) {
+        changeY = 0;
+    }
+    
+ 
 }
 
 
@@ -45,10 +59,17 @@
 {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor whiteColor];
+        
+        CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(timeChange)];
+        [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     }
     return self;
 }
 
+- (void)timeChange
+{
+    [self setNeedsDisplay];
+}
 
 /** 加载进度指示图  */
 - (void)drawProgrsess:(CGFloat)progress
