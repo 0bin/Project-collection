@@ -18,15 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
     self.view.backgroundColor = [UIColor grayColor];
-    
+ 
     BBBQuart2DView *quart = [[BBBQuart2DView alloc] init];
-    [quart setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 100)];
+    [quart setFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height - 164)];
     [self.view addSubview:quart];
     self.quart = quart;
     [self addProgroessView];
-    
     
 }
 
@@ -35,7 +34,7 @@
 - (void)addProgroessView
 {
     UISlider *slider = [[UISlider alloc] init];
-    slider.frame = CGRectMake(100, self.view.bounds.size.height - 80, 100, 44);
+    slider.frame = CGRectMake(100, self.view.bounds.size.height - 60, 100, 44);
     [slider addTarget:self action:@selector(sliderChange:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:slider];
         
