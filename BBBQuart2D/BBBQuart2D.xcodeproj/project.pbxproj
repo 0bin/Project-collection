@@ -19,6 +19,9 @@
 		248AF5AE1D38D716003E616A /* BBBQuart2DView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AF5AD1D38D716003E616A /* BBBQuart2DView.m */; };
 		248AF5B01D392A21003E616A /* Quart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 248AF5AF1D392A21003E616A /* Quart.gif */; };
 		249C5F8B1D338319001543CE /* BBBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C5F8A1D338319001543CE /* BBBViewController.m */; };
+		24F120251D3B58F900911637 /* BBBBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F120241D3B58F900911637 /* BBBBezierPath.m */; };
+		24F120281D3B661100911637 /* UIImage+BBBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F120271D3B661100911637 /* UIImage+BBBCategory.m */; };
+		24F1202B1D3B66F900911637 /* BBBWatermarkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F1202A1D3B66F900911637 /* BBBWatermarkController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,12 @@
 		248AF5AF1D392A21003E616A /* Quart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Quart.gif; sourceTree = "<group>"; };
 		249C5F891D338318001543CE /* BBBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBViewController.h; sourceTree = "<group>"; };
 		249C5F8A1D338319001543CE /* BBBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBViewController.m; sourceTree = "<group>"; };
+		24F120231D3B58F900911637 /* BBBBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBBezierPath.h; sourceTree = "<group>"; };
+		24F120241D3B58F900911637 /* BBBBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBBezierPath.m; sourceTree = "<group>"; };
+		24F120261D3B661100911637 /* UIImage+BBBCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBBCategory.h"; sourceTree = "<group>"; };
+		24F120271D3B661100911637 /* UIImage+BBBCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBBCategory.m"; sourceTree = "<group>"; };
+		24F120291D3B66F900911637 /* BBBWatermarkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBWatermarkController.h; sourceTree = "<group>"; };
+		24F1202A1D3B66F900911637 /* BBBWatermarkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBWatermarkController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +131,13 @@
 				247FB3C11D39FF02001F831C /* BBBDrawingBoardController.m */,
 				247FB3C31D3A00B2001F831C /* BBBDrawBoardView.h */,
 				247FB3C41D3A00B2001F831C /* BBBDrawBoardView.m */,
+				24F120231D3B58F900911637 /* BBBBezierPath.h */,
+				24F120241D3B58F900911637 /* BBBBezierPath.m */,
 				242437D01D30D6F8009C9462 /* Supporting Files */,
+				24F120261D3B661100911637 /* UIImage+BBBCategory.h */,
+				24F120271D3B661100911637 /* UIImage+BBBCategory.m */,
+				24F120291D3B66F900911637 /* BBBWatermarkController.h */,
+				24F1202A1D3B66F900911637 /* BBBWatermarkController.m */,
 			);
 			path = BBBQuart2D;
 			sourceTree = "<group>";
@@ -292,9 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F120281D3B661100911637 /* UIImage+BBBCategory.m in Sources */,
 				247FB3C51D3A00B2001F831C /* BBBDrawBoardView.m in Sources */,
 				249C5F8B1D338319001543CE /* BBBViewController.m in Sources */,
+				24F120251D3B58F900911637 /* BBBBezierPath.m in Sources */,
 				242437D51D30D6F8009C9462 /* AppDelegate.m in Sources */,
+				24F1202B1D3B66F900911637 /* BBBWatermarkController.m in Sources */,
 				247FB3C21D39FF02001F831C /* BBBDrawingBoardController.m in Sources */,
 				242437D21D30D6F8009C9462 /* main.m in Sources */,
 				248AF5AE1D38D716003E616A /* BBBQuart2DView.m in Sources */,

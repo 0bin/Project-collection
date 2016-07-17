@@ -7,15 +7,23 @@
 //
 
 #import "BBBDrawBoardView.h"
-
+#import "BBBBezierPath.h"
 @interface BBBDrawBoardView ()
 
 @property (strong, nonatomic) NSMutableArray *pathsArray;
-@property (strong, nonatomic) UIBezierPath *path;
+@property (strong, nonatomic) BBBBezierPath *path;
 
 @end
 
 @implementation BBBDrawBoardView
+
+- (void)setImage:(UIImage *)image
+{
+    _image = image;
+    [self.pathsArray addObject:image];
+    [self setNeedsDisplay];
+
+}
 
 - (NSMutableArray *)pathsArray
 {
@@ -27,8 +35,14 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    for (UIBezierPath *path in self.pathsArray) {
-        [path stroke];
+    for (BBBBezierPath *path in self.pathsArray) {
+        if ([path isKindOfClass:[UIImage class]]) {
+            UIImage *image = (UIImage *)path;
+            [image drawInRect:rect];
+        } else {
+            [path.pathColor set];
+            [path stroke];
+        }
     }
 }
 
@@ -49,6 +63,8 @@
 - (void)addPan
 {
     UIGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panClikc:)];
+    self.lineWidth = 1;
+    self.lineColor = [UIColor blackColor];
     [self addGestureRecognizer:pan];
 }
 
@@ -57,13 +73,25 @@
 {
     CGPoint Point = [pan locationInView:self];
     if (pan.state == UIGestureRecognizerStateBegan) {
-        self.path = [UIBezierPath bezierPath];
+        self.path = [[BBBBezierPath alloc] init];
         [self.path moveToPoint:Point];
+        self.path.pathColor = self.lineColor;
+        [self.path setLineWidth:self.lineWidth];
         [self.pathsArray addObject:self.path];
     }
     [self.path addLineToPoint:Point];
     [self setNeedsDisplay];
 }
 
+- (void)cleanAll
+{
+    [self.pathsArray removeAllObjects];
+    [self setNeedsDisplay];
+}
 
+- (void)cancelLast
+{
+    [self.pathsArray removeLastObject];
+    [self setNeedsDisplay];
+}
 @end
