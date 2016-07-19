@@ -23,7 +23,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Quart2D基础" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mn7-hX-PI6">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Quart2D - 基础" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mn7-hX-PI6">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -43,7 +43,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Quart2D画板" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bu1-9L-njJ">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Quart2D - 画板" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bu1-9L-njJ">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -63,7 +63,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Quart2D - 图片剪裁水印" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mBk-0N-qdq">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Quart2D - 图片剪裁/水印/截图" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mBk-0N-qdq">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -103,7 +103,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nso-dg-hvk">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Quart2D - 手势锁屏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nso-dg-hvk">
                                                     <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -112,6 +112,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="df2-12-bKq" kind="show" id="o3x-UV-oSb"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="UJ4-VK-e1j" style="IBUITableViewCellStyleDefault" id="PrE-QI-no8">
                                         <rect key="frame" x="0.0" y="284" width="600" height="44"/>
@@ -160,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ia-Gk-OSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="-741"/>
+            <point key="canvasLocation" x="1954" y="-1357"/>
         </scene>
         <!--Drawing Board Controller-->
         <scene sceneID="t1D-n0-qHW">
@@ -314,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzr-a5-KDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="-98"/>
+            <point key="canvasLocation" x="1954" y="-710"/>
         </scene>
         <!--Watermark Controller-->
         <scene sceneID="XIg-Fi-LLv">
@@ -332,12 +335,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqb-Gk-JYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="542"/>
+            <point key="canvasLocation" x="1954" y="-72"/>
         </scene>
-        <!--View Controller-->
+        <!--Scratch Controller-->
         <scene sceneID="4Cg-0O-Quc">
             <objects>
-                <viewController id="t3o-bS-5c6" sceneMemberID="viewController">
+                <viewController id="t3o-bS-5c6" customClass="BBBScratchController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6a8-Zz-9v6"/>
                         <viewControllerLayoutGuide type="bottom" id="0KD-Zl-hkK"/>
@@ -350,7 +353,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ug-7Q-GDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="1231"/>
+            <point key="canvasLocation" x="1954" y="573"/>
+        </scene>
+        <!--Lock View Controller-->
+        <scene sceneID="Z53-n4-64f">
+            <objects>
+                <viewController id="df2-12-bKq" customClass="BBBLockViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgW-gJ-eKE"/>
+                        <viewControllerLayoutGuide type="bottom" id="7jt-s8-08L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OWb-OB-IUc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWJ-0g-bn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="1241"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lCt-4e-VeJ">

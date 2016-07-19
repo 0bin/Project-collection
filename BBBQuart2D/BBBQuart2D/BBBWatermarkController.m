@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    /** 图片剪裁*/
+    /** 图片添加水印*/
     UIImage *image = [UIImage imageNamed:@"123"];
     UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
     [image drawAtPoint:CGPointZero];
