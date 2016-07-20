@@ -10,15 +10,14 @@
 		242437D21D30D6F8009C9462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437D11D30D6F8009C9462 /* main.m */; };
 		242437D51D30D6F8009C9462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437D41D30D6F8009C9462 /* AppDelegate.m */; };
 		242437DD1D30D6F8009C9462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242437DC1D30D6F8009C9462 /* Assets.xcassets */; };
-		242437E01D30D6F8009C9462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242437DE1D30D6F8009C9462 /* LaunchScreen.storyboard */; };
 		242437EB1D30D6F8009C9462 /* BBBQuart2DTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437EA1D30D6F8009C9462 /* BBBQuart2DTests.m */; };
 		242437F61D30D6F8009C9462 /* BBBQuart2DUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 242437F51D30D6F8009C9462 /* BBBQuart2DUITests.m */; };
 		247FB3BF1D39F9DA001F831C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247FB3BE1D39F9DA001F831C /* Storyboard.storyboard */; };
 		247FB3C21D39FF02001F831C /* BBBDrawingBoardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247FB3C11D39FF02001F831C /* BBBDrawingBoardController.m */; };
 		247FB3C51D3A00B2001F831C /* BBBDrawBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 247FB3C41D3A00B2001F831C /* BBBDrawBoardView.m */; };
 		248AF5AE1D38D716003E616A /* BBBQuart2DView.m in Sources */ = {isa = PBXBuildFile; fileRef = 248AF5AD1D38D716003E616A /* BBBQuart2DView.m */; };
-		248AF5B01D392A21003E616A /* Quart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 248AF5AF1D392A21003E616A /* Quart.gif */; };
 		249C5F8B1D338319001543CE /* BBBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C5F8A1D338319001543CE /* BBBViewController.m */; };
+		24AF16E01D3FAD1B007B5AE4 /* Quart2d.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24AF16DF1D3FAD1B007B5AE4 /* Quart2d.gif */; };
 		24EE6C1A1D3DC32000E0013F /* BBBScratchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EE6C191D3DC32000E0013F /* BBBScratchController.m */; };
 		24EE6C1D1D3DFBDD00E0013F /* BBBLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EE6C1C1D3DFBDD00E0013F /* BBBLockViewController.m */; };
 		24EE6C201D3E14F300E0013F /* BBBLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EE6C1F1D3E14F300E0013F /* BBBLockView.m */; };
@@ -50,7 +49,6 @@
 		242437D31D30D6F8009C9462 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		242437D41D30D6F8009C9462 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		242437DC1D30D6F8009C9462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		242437DF1D30D6F8009C9462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		242437E11D30D6F8009C9462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		242437E61D30D6F8009C9462 /* BBBQuart2DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBBQuart2DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		242437EA1D30D6F8009C9462 /* BBBQuart2DTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBBQuart2DTests.m; sourceTree = "<group>"; };
@@ -65,9 +63,9 @@
 		247FB3C41D3A00B2001F831C /* BBBDrawBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBDrawBoardView.m; sourceTree = "<group>"; };
 		248AF5AC1D38D716003E616A /* BBBQuart2DView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBQuart2DView.h; sourceTree = "<group>"; };
 		248AF5AD1D38D716003E616A /* BBBQuart2DView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBQuart2DView.m; sourceTree = "<group>"; };
-		248AF5AF1D392A21003E616A /* Quart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Quart.gif; sourceTree = "<group>"; };
 		249C5F891D338318001543CE /* BBBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBViewController.h; sourceTree = "<group>"; };
 		249C5F8A1D338319001543CE /* BBBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBViewController.m; sourceTree = "<group>"; };
+		24AF16DF1D3FAD1B007B5AE4 /* Quart2d.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Quart2d.gif; sourceTree = "<group>"; };
 		24EE6C181D3DC32000E0013F /* BBBScratchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBScratchController.h; sourceTree = "<group>"; };
 		24EE6C191D3DC32000E0013F /* BBBScratchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBScratchController.m; sourceTree = "<group>"; };
 		24EE6C1B1D3DFBDD00E0013F /* BBBLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBLockViewController.h; sourceTree = "<group>"; };
@@ -110,7 +108,7 @@
 		242437C41D30D6F8009C9462 = {
 			isa = PBXGroup;
 			children = (
-				248AF5AF1D392A21003E616A /* Quart.gif */,
+				24AF16DF1D3FAD1B007B5AE4 /* Quart2d.gif */,
 				242437CF1D30D6F8009C9462 /* BBBQuart2D */,
 				242437E91D30D6F8009C9462 /* BBBQuart2DTests */,
 				242437F41D30D6F8009C9462 /* BBBQuart2DUITests */,
@@ -142,9 +140,6 @@
 				247FB3C41D3A00B2001F831C /* BBBDrawBoardView.m */,
 				24F120231D3B58F900911637 /* BBBBezierPath.h */,
 				24F120241D3B58F900911637 /* BBBBezierPath.m */,
-				242437D01D30D6F8009C9462 /* Supporting Files */,
-				24F120261D3B661100911637 /* UIImage+BBBCategory.h */,
-				24F120271D3B661100911637 /* UIImage+BBBCategory.m */,
 				24F120291D3B66F900911637 /* BBBWatermarkController.h */,
 				24F1202A1D3B66F900911637 /* BBBWatermarkController.m */,
 				24EE6C181D3DC32000E0013F /* BBBScratchController.h */,
@@ -153,6 +148,9 @@
 				24EE6C1C1D3DFBDD00E0013F /* BBBLockViewController.m */,
 				24EE6C1E1D3E14F300E0013F /* BBBLockView.h */,
 				24EE6C1F1D3E14F300E0013F /* BBBLockView.m */,
+				242437D01D30D6F8009C9462 /* Supporting Files */,
+				24F120261D3B661100911637 /* UIImage+BBBCategory.h */,
+				24F120271D3B661100911637 /* UIImage+BBBCategory.m */,
 			);
 			path = BBBQuart2D;
 			sourceTree = "<group>";
@@ -163,7 +161,6 @@
 				242437D31D30D6F8009C9462 /* AppDelegate.h */,
 				242437D41D30D6F8009C9462 /* AppDelegate.m */,
 				242437DC1D30D6F8009C9462 /* Assets.xcassets */,
-				242437DE1D30D6F8009C9462 /* LaunchScreen.storyboard */,
 				242437E11D30D6F8009C9462 /* Info.plist */,
 				242437D11D30D6F8009C9462 /* main.m */,
 			);
@@ -294,9 +291,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				248AF5B01D392A21003E616A /* Quart.gif in Resources */,
+				24AF16E01D3FAD1B007B5AE4 /* Quart2d.gif in Resources */,
 				247FB3BF1D39F9DA001F831C /* Storyboard.storyboard in Resources */,
-				242437E01D30D6F8009C9462 /* LaunchScreen.storyboard in Resources */,
 				242437DD1D30D6F8009C9462 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,17 +363,6 @@
 			targetProxy = 242437F21D30D6F8009C9462 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		242437DE1D30D6F8009C9462 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				242437DF1D30D6F8009C9462 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		242437F81D30D6F8009C9462 /* Debug */ = {

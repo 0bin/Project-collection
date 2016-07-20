@@ -25,6 +25,9 @@
 }
 
 - (void)drawRect:(CGRect)rect {
+    
+    [self drawPentagramWithCount:3];
+    [self drawPentagram];
     [self drawLineEasy];
     [self drawCurveLine];
     [self drawSector];
@@ -32,6 +35,7 @@
     CGRect rect1 = CGRectMake(100, 100, 100, 300);
     [self drawBarChartInRect:rect1];
     [self drawProgrsess:self.progroessValue];
+    [self drawDash];
     /** 画文字  */
     NSString *string = @"hello world!!!";
     [string drawInRect:CGRectMake(100, 400, 100, 44) withAttributes:nil];
@@ -69,6 +73,64 @@
 - (void)timeChange
 {
     [self setNeedsDisplay];
+}
+
+/** 随机画多个五角星  */
+-(void) drawPentagramWithCount:(NSInteger) count{
+    
+    CGPoint centerPoint = CGPointMake(0, 0);
+    CGFloat radius = 100.0;
+    CGPoint points[5];
+    points[0] = CGPointMake(centerPoint.x, centerPoint.y-radius);
+    CGFloat angle = 4*M_PI / 5.0;
+    for (NSInteger i = 1; i < 5; i++) {
+        CGFloat x = centerPoint.x - sinf(i*angle)*radius;
+        CGFloat y = centerPoint.y - cosf(i*angle)*radius;
+        points[i] = CGPointMake(x, y);
+    }
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    for (NSInteger i = 0; i < count; i++) {
+        CGContextSaveGState(context); //保存上下文
+        int randomX = arc4random_uniform(320);
+        int randomY = arc4random_uniform(480);
+        CGContextTranslateCTM(context, randomX,randomY);//随机移动画布位置
+        CGFloat roate = arc4random_uniform(90) * M_PI / 180.0;//随机旋转画布
+        CGContextRotateCTM(context, roate);
+        float scale = arc4random_uniform(5) / 10.0 + 0.2;
+        CGContextScaleCTM(context, scale, scale); //随机缩放画布
+        [[UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0] set];
+        CGContextMoveToPoint(context, points[0].x,points[0].y);
+        for (NSInteger i = 1; i < 5; i++) {
+            CGContextAddLineToPoint(context, points[i].x,points[i].y);
+        }
+        CGContextDrawPath(context, kCGPathFillStroke);
+        CGContextRestoreGState(context);       //恢复上下文
+    }
+}
+
+/** 画五角星  */
+- (void)drawPentagram
+{
+    NSInteger count = 5;
+    CGPoint centerPoint = CGPointMake(100, 100);
+    CGFloat radius = 88;
+    CGPoint pointOne = CGPointMake(centerPoint.x, centerPoint.y - radius);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextMoveToPoint(context, pointOne.x, pointOne.y);
+    CGFloat angle = M_PI *4 / count;
+    for (NSInteger i = 0; i < count; i++) {
+        CGFloat pointX = centerPoint.x - sinf(i * angle) * radius;
+        CGFloat pointY = centerPoint.y - cosf(i * angle) * radius;
+        CGContextAddLineToPoint(context, pointX, pointY);
+    }
+  /**kCGPathFill,
+     kCGPathEOFill,
+     kCGPathStroke,
+     kCGPathFillStroke,
+     kCGPathEOFillStroke  */
+    CGContextDrawPath(context,  kCGPathFill);
+
+
 }
 
 /** 加载进度指示图  */
@@ -159,7 +221,18 @@
     CGContextStrokePath(context);
     
 }
-
+/** 画虚线 */
+- (void)drawDash
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextBeginPath(context);
+    CGFloat lengths[] = {10,20,40}; //虚线空白部分长度
+    CGContextSetLineDash(context, 20, lengths, 3); //20初始段长度，lengths数组，3数组长度
+    CGContextMoveToPoint(context, 300, 20);
+    CGContextAddLineToPoint(context, 20, 20);
+    CGContextStrokePath(context);
+    CGContextClosePath(context);
+}
 
 /** 画线方式1 */
 - (void)drawLineEasy

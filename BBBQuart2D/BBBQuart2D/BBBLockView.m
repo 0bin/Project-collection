@@ -49,8 +49,9 @@
     
     for (NSInteger i = 0; i < buttonCount; i++) {
         UIButton *button = [[UIButton alloc] init];
+        button.tag = i;
         [button setImage:[UIImage imageNamed:@"gesture_node_normal"] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:@"gesture_node_highlighted"] forState:UIControlStateHighlighted];
+        [button setImage:[UIImage imageNamed:@"gesture_node_highlighted"] forState:UIControlStateSelected];
         [button setUserInteractionEnabled:NO];//设置不接受交互，不然会影响pan交互
         CGFloat buttonX = i % column * (buttonW + margin) + margin;
         CGFloat buttonY = i / column * (buttonH + margin) ;
@@ -66,17 +67,33 @@
 {
     self.point = [pan locationInView:self];
     for (UIButton *button in self.subviews) {
-        if (CGRectContainsPoint(button.frame, self.point)) {
+        if (CGRectContainsPoint(button.frame, self.point) && button.selected == NO){
             button.selected = YES;
             [self.buttonArray addObject:button];
         }
     }
     [self setNeedsDisplay];
 
+    if (pan.state == UIGestureRecognizerStateEnded){
+        NSMutableString *stringPSW = [NSMutableString string];
+        for (UIButton *button in self.buttonArray){
+                [stringPSW appendFormat:@"%ld",button.tag];
+                button.selected = NO;
+            }
+        [self.buttonArray removeAllObjects];
+        [self setNeedsDisplay];
+
+        if ([stringPSW isEqualToString:@"012"]) {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"解锁成功" preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+                [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+            } else {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"输入错误" preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+                [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+            }
+    }
     
-
-
-
 
 }
 
