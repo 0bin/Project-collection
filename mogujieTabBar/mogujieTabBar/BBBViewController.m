@@ -18,8 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor grayColor];
-    
-    UIView animateWithDuration:<#(NSTimeInterval)#> animations:<#^(void)animations#>
+  
     
     
 }

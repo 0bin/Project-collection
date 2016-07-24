@@ -82,7 +82,7 @@
     CGFloat radius = 100.0;
     CGPoint points[5];
     points[0] = CGPointMake(centerPoint.x, centerPoint.y-radius);
-    CGFloat angle = 4*M_PI / 5.0;
+    CGFloat angle = 4 * M_PI / 5.0;
     for (NSInteger i = 1; i < 5; i++) {
         CGFloat x = centerPoint.x - sinf(i*angle)*radius;
         CGFloat y = centerPoint.y - cosf(i*angle)*radius;

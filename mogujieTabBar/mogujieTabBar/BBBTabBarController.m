@@ -13,13 +13,22 @@
 
 
 @interface BBBTabBarController ()<UITabBarDelegate>
-/**
- *  <#Description#>
- */
-@property (weak, nonatomic) UIButton *addButton;
+
+@property (strong, nonatomic) UIButton *addButton;
+
 @end
 
 @implementation BBBTabBarController
+
+
+
+- (UIButton *)addButton
+{
+    if (_addButton == nil) {
+        _addButton = [[UIButton alloc]init];
+    }
+    return _addButton;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,36 +47,40 @@
     
     BBBViewController *five = [[BBBViewController alloc] init];
     [self addTabBarChildVC:five Image:@"tabbar_home" selectedImage:@"tabbar_home_highlighted" title:@"five"];
-    
+  
 }
+
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self.addButton setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
+    [self.addButton setImage:[UIImage imageNamed:@"tabbar_compose_icon_add_highlighted"] forState:UIControlStateHighlighted];
+    [self.addButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
+    [self.addButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
     
-    UIButton *addButton = [[UIButton alloc] init];
-    [addButton setImage:[UIImage imageNamed:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
-    [addButton setImage:[UIImage imageNamed:@"tabbar_compose_icon_add_highlighted"] forState:UIControlStateHighlighted];
-    [addButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
-    [addButton setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
-    
-    CGFloat width = addButton.currentBackgroundImage.size.width;
-    CGFloat height = self.tabBar.bounds.size.height ;
+    CGFloat width = self.addButton.currentBackgroundImage.size.width;
+    CGFloat height = self.tabBar.bounds.size.height;
     CGFloat centerX = self.tabBar.bounds.size.width * 0.5;
     CGFloat centerY = self.tabBar.bounds.size.height * 0.5;
     
-    addButton.frame = CGRectMake(0, 0, width, height);
-    addButton.center = CGPointMake(centerX, centerY);
-    [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.tabBar addSubview:addButton];
-    self.addButton = addButton;
+    self.addButton.frame = CGRectMake(0, 0, width, height);
+    self.addButton.center = CGPointMake(centerX, centerY);
+    [self.addButton addTarget:self action:@selector(addButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.tabBar addSubview:self.addButton];
+    
+
 
 }
+
+
 
 
 - (void)addButtonClick
 {
     BBBAddController *addVC = [[BBBAddController alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController.navigationController pushViewController:addVC animated:YES];
     [self presentViewController:addVC animated:YES completion:nil];
 
 }
@@ -75,7 +88,8 @@
 
 /**
  *  添加tabbar子控制器
- *
+ *    if (item.tag == 10) {
+  }
  *  @param childVC       传入控制器
  *  @param image         图片
  *  @param selectedImage 选中图片
@@ -94,12 +108,31 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     NSLog(@"---%@---",item.title);
-    [UIView animateWithDuration:3.0 animations:^{
-        
-            self.addButton.hidden = ![item.title isEqualToString:@"three"];
-    }];
-
-   
+    self.addButton.hidden = ![item.title isEqualToString:@"three"];
+    
+    if (![item.title isEqualToString:@"three"]) {
+        self.addButton.hidden;
+    }
+    
+    
+    //    CGFloat width = self.addButton.currentBackgroundImage.size.width;
+    //    CGFloat height = self.tabBar.bounds.size.height;
+    //    CGFloat centerX = self.tabBar.bounds.size.width * 0.5;
+    //    CGFloat centerY = self.tabBar.bounds.size.height * 0.5;
+//    if (![item.title isEqualToString:@"three"]) {
+//        [UIView animateWithDuration:1.0 animations:^{
+//            CGRect frame = self.addButton.frame;
+//            frame.size.width = 1;
+//            frame.size.height = 1;
+//            self.addButton.frame = frame;
+//            self.addButton.center = CGPointMake(centerX, centerY);
+//        }completion:^(BOOL finished) {
+//            self.addButton.hidden = YES;
+//            self.addButton.frame = CGRectMake(0, 0, width, height);
+//            self.addButton.center = CGPointMake(centerX, centerY);
+//        }];
+//
+//    }
 
 }
 

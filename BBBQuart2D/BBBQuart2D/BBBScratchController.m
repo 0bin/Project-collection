@@ -22,13 +22,13 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"123"]];
     imageView.frame = CGRectMake(20, 100, 220, 220);
     [self.view addSubview:imageView];
+
     
     UIImageView *coverImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1234"]];
     coverImage.frame = CGRectMake(20, 100, 220, 220);
     [self.view addSubview:coverImage];
     self.coverImage = coverImage;
 
-    
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -42,6 +42,7 @@
     [self.coverImage.layer renderInContext:context];
     CGContextClearRect(context, rect);
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    self.coverImage.layer.shouldRasterize = YES;
     self.coverImage.image = image;
     UIGraphicsEndImageContext();
     
