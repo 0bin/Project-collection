@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		24020AB21D43479C000C8364 /* BBBClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24020AB11D43479C000C8364 /* BBBClockViewController.m */; };
-		24020AB51D434C0D000C8364 /* BBBClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24020AB41D434C0D000C8364 /* BBBClockView.m */; };
+		24020AB81D449DF2000C8364 /* BBBHitTestingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24020AB71D449DF2000C8364 /* BBBHitTestingViewController.m */; };
+		2411DE0E1D45ED8700CA3841 /* BBBMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2411DE0D1D45ED8700CA3841 /* BBBMaskViewController.m */; };
 		2434D5F71D41E98100566F79 /* BBBBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2434D5F61D41E98100566F79 /* BBBBasicViewController.m */; };
 		24535C341D40A7AA001E1D03 /* BBBSpritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24535C331D40A7AA001E1D03 /* BBBSpritesViewController.m */; };
 		249C5F9A1D338330001543CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C5F991D338330001543CE /* main.m */; };
@@ -40,8 +41,10 @@
 /* Begin PBXFileReference section */
 		24020AB01D43479C000C8364 /* BBBClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBClockViewController.h; sourceTree = "<group>"; };
 		24020AB11D43479C000C8364 /* BBBClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBClockViewController.m; sourceTree = "<group>"; };
-		24020AB31D434C0D000C8364 /* BBBClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBClockView.h; sourceTree = "<group>"; };
-		24020AB41D434C0D000C8364 /* BBBClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBClockView.m; sourceTree = "<group>"; };
+		24020AB61D449DF2000C8364 /* BBBHitTestingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBHitTestingViewController.h; sourceTree = "<group>"; };
+		24020AB71D449DF2000C8364 /* BBBHitTestingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBHitTestingViewController.m; sourceTree = "<group>"; };
+		2411DE0C1D45ED8700CA3841 /* BBBMaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBMaskViewController.h; sourceTree = "<group>"; };
+		2411DE0D1D45ED8700CA3841 /* BBBMaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBMaskViewController.m; sourceTree = "<group>"; };
 		2434D5F51D41E98100566F79 /* BBBBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBBasicViewController.h; sourceTree = "<group>"; };
 		2434D5F61D41E98100566F79 /* BBBBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBBBasicViewController.m; sourceTree = "<group>"; };
 		24535C321D40A7AA001E1D03 /* BBBSpritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBBSpritesViewController.h; sourceTree = "<group>"; };
@@ -119,9 +122,11 @@
 				2434D5F61D41E98100566F79 /* BBBBasicViewController.m */,
 				24020AB01D43479C000C8364 /* BBBClockViewController.h */,
 				24020AB11D43479C000C8364 /* BBBClockViewController.m */,
+				24020AB61D449DF2000C8364 /* BBBHitTestingViewController.h */,
+				24020AB71D449DF2000C8364 /* BBBHitTestingViewController.m */,
+				2411DE0C1D45ED8700CA3841 /* BBBMaskViewController.h */,
+				2411DE0D1D45ED8700CA3841 /* BBBMaskViewController.m */,
 				249C5F981D338330001543CE /* Supporting Files */,
-				24020AB31D434C0D000C8364 /* BBBClockView.h */,
-				24020AB41D434C0D000C8364 /* BBBClockView.m */,
 			);
 			path = BBBLayer;
 			sourceTree = "<group>";
@@ -292,8 +297,9 @@
 				249C5F9D1D338330001543CE /* AppDelegate.m in Sources */,
 				249C5F9A1D338330001543CE /* main.m in Sources */,
 				24020AB21D43479C000C8364 /* BBBClockViewController.m in Sources */,
-				24020AB51D434C0D000C8364 /* BBBClockView.m in Sources */,
+				2411DE0E1D45ED8700CA3841 /* BBBMaskViewController.m in Sources */,
 				2434D5F71D41E98100566F79 /* BBBBasicViewController.m in Sources */,
+				24020AB81D449DF2000C8364 /* BBBHitTestingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
